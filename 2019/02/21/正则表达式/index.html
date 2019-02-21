@@ -4,11 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="linux指令, leejune">
-    <meta name="description" content="连接云服务器：1.连接服务器:    ssh  root@ip地址2.退出:  logout
-Linux指令系统：
-命令名称 [命名参数] [命令对象]
-一、日常操作1.cd指令       - 进入指定文件夹cd  目录     - 进入">
+    <meta name="keywords" content="正则表达式（python3）, leejune">
+    <meta name="description" content="1.什么是正则表达式(语法通用)正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符
+2.python对正则表达式的支持通过re模块提供相应支持正则表达式的方法a.fullmatch(正则表达式, 字符串)  –&amp;gt; 用正则">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@ Linux指令系统：
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>linux指令 | leejune</title>
+    <title>正则表达式（python3） | leejune</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -282,13 +280,13 @@ Linux指令系统：
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        linux指令
+                        正则表达式（python3）
                     </div>
                 </div>
             </div>
@@ -388,8 +386,8 @@ Linux指令系统：
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/linux/" class="post-category" target="_blank">
-                                linux
+                            <a href="/categories/python3/" class="post-category" target="_blank">
+                                python3
                             </a>
                         
                     </div>
@@ -400,7 +398,7 @@ Linux指令系统：
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-02-20
+                    2019-02-21
                 </div>
 
                 
@@ -411,93 +409,97 @@ Linux指令系统：
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>连接云服务器：<br>1.连接服务器:    ssh  root@ip地址<br>2.退出:  logout</p>
-<p>Linux指令系统：</p>
-<p>命令名称 [命名参数] [命令对象]</p>
-<p>一、日常操作<br>1.cd指令       - 进入指定文件夹<br>cd  目录     - 进入指定目录(也可以是文件夹对应的路径)<br>               ~相对路径 — 绝对路径<br>cd  ..       - 返回上层目录<br>cd  ~    - 回到根目录<br>cd  /    - 进入系统根目录</p>
-<ol start="2">
-<li>ls指令        - 查看当前目录中的内容<br>ls<br>ls  -l/-lh              -  查看详情<br>ls -a               - 隐藏文件也一起显示<br>ls -R            - 递归显示所有内容<br>ls -S/-t            - 按大小/时间排序</li>
-</ol>
-<p>3.pwd指令         - 显示当前完整目录<br>pwd</p>
-<p>4.文件操作指令<br>touch  文件名        - 新建文件<br>cat 文件名           - 查看文件内容<br>vim/vi  文件名          -打开文件</p>
-<p>rm    文件名        - 删除文件<br>rm - r 目录        - 删除文件夹</p>
-<p>cp  文件名1  文件名2    - 将文件1中的内容拷贝到文件2中<br>cp  文件1路径   文件2路径<br>cp -r  文件名/目录名   目录2    - 将文件/目录拷贝到目录2中</p>
-<p>mv    文件名1  文件名2    - 将文件1中的内容移动到文件2中 ,并且删除文件1（文件重命名）<br>mv  文件1路径   文件2路径</p>
-<p>mv    文件名1  文件目录    - 将文件1移动到指定目录中<br>注意: mv指令不能加-r来操作目录</p>
-<p>(注意：cp/mv/rm 后面可以跟： -i询问  -f强制  -n不覆盖)</p>
-<p>mkdir  目录名        - 新建文件夹<br>mkdir -p a/b/c        - 按层级创建a,b,c三个文件夹<br>mkdir -p a/{b,c}/{d,e,f}    -同一层级常见多个</p>
-<p>rmdir  目录名        - 删除指定空目录</p>
-<p>7.history        - 显示历史指令记录<br>bashrc 配置显示时间：export  HISTTIMEFORMAT=”[%y‐%m‐%d_%T] “<br>修改bashrc 后使其生效:  source ~/.bashrc  或 .  .bashrc<br>6.链接<br>ln -s 源路径  目标路径        - 给源路径对应的文件在目标路径下创建一个软链接(可以看成是快捷键)(源路径是绝对路径) (掌握！)<br>ln 源路径  目标路径            - 给源路径对应的文件在目标路径下创建一个硬链接（了解）<br>注意: 源文件不存在的时候，软件无效，硬链接变成普通文件<br>8.快捷键<br>ctr + f         - 前进一个字符<br>ctr + b        - 后退一个字符<br>ctr + a        - 回到行首<br>ctr + e         - 回到行尾<br>ctr + w        - 向左删除一个单词<br>ctr + u        - 向左删除全部<br>ctr + k        - 向右删除全部<br>ctr + y        - 粘贴上次删除的内容<br>ctr + l        - 清屏<br>二、进程相关指令(用得较少)<br>1.ps指令<br>ps                        - 进程状态<br>ps -aux  或者  ps ex            - 查看进程<br>ps -aux|grep 进程名        - 查看指定进程<br>ps grep  进程ID<br>2.top指令<br>top                         - 动态监控进程<br>top  -p PID1,PID2,….        - 动态监控指定进程<br>3.free指令<br>free -单位                    - 以指定单位查看内存, 例如 free -m (以Mb为单位显示内存状况), -g,  -k等！<br>4.kill指令<br>kill 进程号                    - 杀死指定的进程<br>kill -1/-9/-15                - -1(HUP)不间断重启，-9(KILL)强制杀死进程,-15(TERM)正常终止进程<br>pkill  进程名                - 按名字处理进程<br>killall 进程名                - 处理名字匹配的进程<br>uptime                    - 查看系统状态<br>三、权限管理<br>1.user和group : 一个系统可以有多个用户和多个分组； 一个分组中可以有多个用户，一个用户在不同的分组中(多对多)<br>users                                     - 查看当前用户<br>groups                                 - 查看当前分组<br>groupadd  分组名                            - 添加分组<br>useradd ‐G 分组列表 ‐m ‐s /bin/bash 用户名        - 创建一个用户添加到指定的分组中(在home创建相应的文件夹)<br>usermod -G 分组列表 用户名                    - 修改分组<br>passwd 用户名                            - 修改密码<br>su  用户名                                - 切换用户身份<br>sudo                                        - 以管理员执行其他程序<br>注意： a.在ubuntu需要将用户添加到sudo分组中，才能使用sudo以管理员的身份执行程序<br>          b.在centOS中需要先执行vi 指令进入sudoers文件中在指定的位置添加内容</p>
-<pre><code>## Allow root to run any commands anywhere
-root    ALL=(ALL)       ALL
-xiaoming ALL=(ALL)      ALL        (自己添加的，xiaoming是用户名)
-</code></pre><p>2.chmod<br>chmod       权限值   文件            - 修改指定文件的权限<br>chmod    [a,u,g,o][+,-][r,w,x]  文件            - 为指定文件，给所有用户添加相应的权限<br>                                              (a:所有，u:自己，g:同组，o:其他；<br>                                            +：添加， -: 取消；<br>                                            r:读，w:写，x:执行)<br>chown  用户名     文件            - 改变文件所有者<br>￼<br>(权限制是三组二进制值)<br>self      group    other<br>rwx      rwx        rwx<br>111       101        001            - 自己读写可执行，同一分组的只读可执行，其他的只可执行<br>110      100        000<br>chmod  644  文件<br>chmod  777   文件<br>chmod 666    文件<br>三、日志管理<br>1.cat指令<br>cat       文件                - 查看文件内容<br>2.查看部分<br>head -n  N  文件        - 查看前N行内容<br>tail  -n  N    文件         - 查看后N行内容<br>3.<br>less [-N]  文件</p>
-<pre><code>- 按 j 向下
-- 按 k 向上
-- 按 f 向下翻屏
-- 按    b 向上翻屏
-- 按 g 到全文开头
-- 按 G 到全文结尾
-- 按 Q 退出  
-</code></pre><p>more [-N]  文件            - 和less差不多，这个是尽可能多，less是尽可能少的加载</p>
-<p>4.处理<br>sort                  - 排序  (cat 文件 |sort)<br>uniq                - 去重  (cat 文件 |uniq) - 只会去重相邻的重复是数据，一般结合sort一起使用:  |sort|uniq<br>awk ‘{print $N}’    - 打印第N列的内容(netstat -natp|awk ‘{print $4}’)</p>
-<p>history |awk ‘{print $4}’ |sort |uniq ‐c | sort ‐rnk 1 | head ‐n 3           -获取历史指令中，使用最频繁的三个指令</p>
-<p>5.重定向<br>执行获取数据的指令  &gt; 文件  （将执行指定的结果存储到文件中 - 覆盖原文件中内容）<br>执行获取数据的指令 &gt;&gt; 文件   (将执行指定的结果存储到文件中 - 在原文件的最后追加)</p>
-<p>5.统计<br>wc -c(字符)/-w(单词)/-l(行)  文件</p>
-<p>6.查找<br>grep  查看对象    目录/文件  参数</p>
-<pre><code>参数：
-    -i    忽略大小写:         grep you bb.txt   -i
-    -n   显示行标号：      grep you bb.txt -n   /   grep you bb.txt -i -n
-    -E   通过正则表达式匹配:     grep -E  ‘正则表达式’  文件
-    注意： Linux中，正则不支持: \d, \s,\w,\b,\D,\S,\W,\B
-                                       支持：.   +, *, ?, {N,M}, [], ^, $
-
-
-    -v   忽略字段:   grep you bb.txt -v  (在bb.txt中找不包含you的所有行)
-                    grep -E &apos;[0-9]+\.[0-9]+&apos; abb.txt -v
-
-    -rn  递归查找目录，并打印行号
-    grep -r  you ./   (在当前文件夹下中所有文件中去找包行’you’的行)
-
-
-    —include=‘*.py’    仅包含 py文件: grep -r you ./ --include=&apos;*.txt&apos;
-
-    —exclude=‘*.js’    不包含 js 文件: grep -r you ./ --exclude=&apos;*.c&apos;
-
-例如：
-    grep you bb.txt  
-    grep you bb.txt -i
-    grep you bb.txt -i -n
-    grep -E &apos;[0-9]+&apos; bb.txt 
-</code></pre><p>find       DIR    -name  ‘<em>.xxx’        找到目录下所有名字匹配的文件:  find a1 -name ‘</em>.txt’(在文件夹a1中找所有txt文件)</p>
-<pre><code>例：find ./ -size +20k -size -100k -name &apos;*.txt&apos;   (找当前目录下大于20k并且小于100k的所有txt文件)
-</code></pre><p>which  指令        - 精确查找当前可执行的指令<br>whereis  指令    - 查找所有匹配的命令</p>
-<p>四、网络管理</p>
-<p>ifconfig     查看网卡状态</p>
-<p>netstat   -natp                    - 查看网络连接状态<br>netstat   -natp|grep  端口号            - 查看指定端口的网络连接状态    </p>
-<p>ping  地址<br>ping  -i   时间    地址<br>ping  -c  次数    地址</p>
-<p>telnet  ip地址    端口         - 查看远程主机网络连接状况</p>
-<p>dig 地址            - 查看DNS</p>
-<p>** wget  地址            - 下载  </p>
-<p>五、使用包管理工具<br>包管理工具：yum </p>
-<ul>
-<li>yum search：搜索软件包，例如yum search nginx。</li>
-<li>yum list installed：列出已经安装的软件包，例如yum list installed | grep zlib。</li>
-<li>yum install：安装软件包，例如yum install nginx。</li>
-<li>yum remove：删除软件包，例如yum remove nginx。</li>
-<li>yum update：更新软件包，例如yum update可以更新所有软件包，而yum update tar只会更新tar。</li>
-<li>yum check-update：检查有哪些可以更新的软件包。</li>
-<li>yum info：显示软件包的相关信息，例如yum info nginx。</li>
-</ul>
-<p>源代码构建安装</p>
-<ol>
-<li>wget  安装包的路径        -下载安装包</li>
-<li>gunzip/tar  压缩包         - 解压、解归档</li>
-<li>(设置安装路径)</li>
-<li>cd 安装包目录 执行: make &amp;&amp; make install       -编译安装包程序</li>
-<li>给可执行文件添加软连接到usr/bin目录下            -添加快捷方式</li>
-</ol>
-<p>压缩/解压缩和归档/解归档 - gzip / gunzip / xz / tar</p>
+                <h1 id="1-什么是正则表达式-语法通用"><a href="#1-什么是正则表达式-语法通用" class="headerlink" title="1.什么是正则表达式(语法通用)"></a>1.什么是正则表达式(语法通用)</h1><p>正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符</p>
+<h1 id="2-python对正则表达式的支持"><a href="#2-python对正则表达式的支持" class="headerlink" title="2.python对正则表达式的支持"></a>2.python对正则表达式的支持</h1><p>通过re模块提供相应支持正则表达式的方法<br>a.fullmatch(正则表达式, 字符串)  –&gt; 用正则表达式来和指定字符串进行匹配，<br>                                   如果匹配成功返回匹配对象，匹配失败返回None<br>python正的正则表达式是写在字符串中的，但是一般情况下会在最前面加r/R<br><code>from  re import fullmatch, search</code></p>
+<h1 id="0-普通字符-代表字符本身"><a href="#0-普通字符-代表字符本身" class="headerlink" title="0  普通字符(代表字符本身)"></a>0  普通字符(代表字符本身)</h1><p>`</p>
+<h1 id="匹配一个字符串，只有三个字符，每个字符分别是a-b-c"><a href="#匹配一个字符串，只有三个字符，每个字符分别是a-b-c" class="headerlink" title="匹配一个字符串，只有三个字符，每个字符分别是a,b,c"></a>匹配一个字符串，只有三个字符，每个字符分别是a,b,c</h1><pre><code>re_str = r&apos;abc&apos;
+result = fullmatch(re_str, &apos;abc&apos;)
+print(result)
+</code></pre><p>`</p>
+<h1 id="1-匹配任意字符"><a href="#1-匹配任意字符" class="headerlink" title="1  .(匹配任意字符)"></a>1  .(匹配任意字符)</h1><p> 注意：a. 一个.代表一个字符<br>                 b.不同匹配\n</p>
+<pre><code># 匹配一个字符串，只有三个字符，第一个字符是a, 第二个字符是任意字符，最后一个字符是c
+</code></pre><p><code>re_str = r&#39;a.c&#39;
+    result = fullmatch(re_str, &#39;a\rc&#39;)
+    print(result)</code></p>
+<h1 id="2-w-匹配字母数字下划线中文"><a href="#2-w-匹配字母数字下划线中文" class="headerlink" title="2 \w(匹配字母数字下划线中文)"></a>2 \w(匹配字母数字下划线中文)</h1><p>   注意：a. 也可以匹配中文<br>               b. 一个\w只能匹配一个字符<br>`</p>
+<pre><code># 匹配一个字符串，第一个字符是任意字符，第二个和第三个字符是字母、数字或者_, 最后是三个是abc
+re_str = r&apos;.\w\wabc&apos;
+result = fullmatch(re_str, &apos;o胡habc&apos;)
+print(result)
+</code></pre><p>`</p>
+<h1 id="3-s-匹配空白字符"><a href="#3-s-匹配空白字符" class="headerlink" title="3 \s(匹配空白字符)"></a>3 \s(匹配空白字符)</h1><p>   空白字符：指的是所有能产生空白的字符，包括空格、制表符、换行等<br>   匹配一个字符串，前两个字符是字母、数字、下划线或者中文，第三个字符是空白，最后一个字符是任意字符<br><code>re_str = r&#39;\w\w\s.&#39;
+    result = fullmatch(re_str, &#39;a2\t)&#39;)
+    print(result)</code></p>
+<h1 id="4-d-匹配数字字符"><a href="#4-d-匹配数字字符" class="headerlink" title="4 \d(匹配数字字符)"></a>4 \d(匹配数字字符)</h1><p>   匹配一个字符串有三个字符，每个字符都是数字字符<br><code>re_str = r&#39;\d\d\d&#39;
+    result = fullmatch(re_str, &#39;380&#39;)
+    print(result)</code></p>
+<h1 id="5-b-检测单词边界"><a href="#5-b-检测单词边界" class="headerlink" title="5 \b(检测单词边界)"></a>5 \b(检测单词边界)</h1><p>   a.检测正则表达式中\b所在的位置是否是单词边界<br>   b.单词边界：所有可以将两个单词区分开的符号都是单词边界,例如: 空格, 缩进, 标点符号等,单词开头、单词结尾</p>
+<p>  注意：\b不是匹配符号，不会匹配出一个字符，只是检测所在的位置是否满足要求。</p>
+<pre><code># 匹配一个字符串的内容是&apos;how are&apos;,并且要求字符&apos;a&apos;的前面是单词边界
+</code></pre><p><code>re_str = r&#39;\bhow\b,are&#39;
+    result = fullmatch(re_str, &#39;how,are&#39;)
+    print(result)
+    print(fullmatch(r&#39;\b\d\d\d&#39;, &#39;234&#39;))
+    print(search(r&#39;\b\d\d\d\b&#39;, &#39;sjsd90, 783,&#39;))</code></p>
+<h1 id="6-检测字符串开头"><a href="#6-检测字符串开头" class="headerlink" title="6 ^(检测字符串开头)"></a>6 ^(检测字符串开头)</h1><p>   匹配一个字符串是三个数字字符，并且第一个字符所在的位置是字符串开头<br><code>re_str = &#39;^\d\d\d&#39;
+    result = search(re_str, &#39;789sjhsdjjh7892sss&#39;)
+    print(result)</code></p>
+<h1 id="7-检测字符串结尾"><a href="#7-检测字符串结尾" class="headerlink" title="7 $(检测字符串结尾)"></a>7 $(检测字符串结尾)</h1><p>   匹配一个字符串是三个数字字符，并且最后一个字符的后面是字符串结尾<br><code>re_str = r&#39;\d\d\d$&#39;
+    result = search(re_str, &#39;sjss873ssjkd900&#39;)
+    print(result)</code></p>
+<pre><code># 8 \B(检测非单词边界)
+</code></pre><p><code>re_str = r&#39;abc\B123&#39;
+    result = fullmatch(re_str, &#39;abc123&#39;)
+    print(result)</code></p>
+<h1 id="9-W-匹配非数字字母下划线中文"><a href="#9-W-匹配非数字字母下划线中文" class="headerlink" title="9  \W(匹配非数字字母下划线中文)"></a>9  \W(匹配非数字字母下划线中文)</h1><h1 id="10-S-匹配非空白字符"><a href="#10-S-匹配非空白字符" class="headerlink" title="10 \S(匹配非空白字符)"></a>10 \S(匹配非空白字符)</h1><h1 id="11-D-匹配非数字字符"><a href="#11-D-匹配非数字字符" class="headerlink" title="11 \D(匹配非数字字符)"></a>11 \D(匹配非数字字符)</h1><h1 id="12、-字符集"><a href="#12、-字符集" class="headerlink" title="12、 字符集"></a>12、 <a href="匹配字符集中的任意一个字符">字符集</a></h1><p>   注意： 一个[]代表一个字符<br>   a.普通用法<br>   [字符集]  -  匹配字符集中的任意一个字符<br>   b.表示范围<br>    [字符1-字符2]  - 匹配字符1到字符2中所有的字符。要求字符1的编码值要小于字符2的编码值<br>    [1-9]  -  数字1到9<br>    [a-z]  - 小写字母<br>    [A-Z]  - 大写字母<br>    [a-zA-Z]    - 所有字母<br>    [a-zA-Z\d_] - 数字字母下划线</p>
+<h1 id="匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’-后边是123"><a href="#匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’-后边是123" class="headerlink" title="匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’, 后边是123"></a>匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’, 后边是123</h1><p><code>re_str = r&#39;[abc]123&#39;
+    result = fullmatch(re_str, &#39;b123&#39;)
+    print(result)</code></p>
+<h1 id="匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字"><a href="#匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字" class="headerlink" title="匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字"></a>匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字</h1><p><code>re_str = r&#39;[1-7]\d\d[a-z]&#39;
+    result = fullmatch(re_str, &#39;212g&#39;)
+    print(result)
+    re_str = r&#39;[a-zA-Z\d_]&#39;
+    result = fullmatch(re_str, &#39;9&#39;)
+    print(result)</code></p>
+<h1 id="13-字符集-匹配没有在字符集中的其他任意字符"><a href="#13-字符集-匹配没有在字符集中的其他任意字符" class="headerlink" title="13 [^字符集] - 匹配没有在字符集中的其他任意字符"></a>13 [^字符集] - 匹配没有在字符集中的其他任意字符</h1><p>  注意：^放在[]的最前面才表示匹配不在字符集中的其他任意字符;^如果不放在[]的最前面，就表示字符^本身<br>  匹配一个字符串，第一个字符只要不是abc中的一个其他字符都可以，后面是123<br><code>re_str = r&#39;[^abc]123&#39;
+    result = fullmatch(re_str, &#39;胡123&#39;)
+    print(result)</code><br>  第一个字符只要不是1-9中的任意一个其他都可以<br><code>re_str = r&#39;[^1-9]123&#39;
+    result = fullmatch(re_str, &#39;s123&#39;)
+    print(result)</code><br>  第一个字符是1-9中的一个或者是^<br><code>re_str = r&#39;[1-9^]123&#39;
+    result = fullmatch(re_str, &#39;^123&#39;)
+    print(result)</code></p>
+<p> #14  转义符号<br>  a.正则中也可以通过在特殊符号前加’\’来对符号进行转义</p>
+<p>  \ -  \字符<br>    . - .字符<br>    \^ -  ^字符</p>
+<p> b.除了在中括号中有特殊意义的符号，其他符号放在[]中也是表示符号本身</p>
+<pre><code>- ：在中括号中的两个字符之间表示谁到谁；如果想要表示它本身就不要放在两个字符之间
+^:  在中括号中的最前面有特殊意义；如果想要表示它本身就不要放在最前面
+[]: 在中括号中表示[],要加\
+</code></pre><p>   注意： 转义字符是字符串中的概念<br>          转义符号是正则表达式的概念<br><code>re_str = r&#39;\(\^\d\d\.\)\d\d\\b&#39;
+    print(fullmatch(re_str, r&#39;(^23.)45\b&#39;))
+    print(fullmatch(r&#39;[-19.\]*^]&#39;, &#39;*&#39;))</code></p>
+<h1 id="1-匹配0次或多次"><a href="#1-匹配0次或多次" class="headerlink" title="1 *(匹配0次或多次)"></a>1 *(匹配0次或多次)</h1><p>   字符*  - 指定的字符出现0次或者多次(这儿的字符可以是正则符号，也可以是普通字符)</p>
+<p>   a<em> - a出现0次或者多次<br>    \d</em> - 任意数字出现0次或者多次<br>    [a-z]<em> - 任意小写字母出现0次或多次<br>   123前面有0个或者多个字符，并且每个字符都是a<br>`<br>    re_str = r’a</em>123’<br>    print(re.fullmatch(re_str, ‘aaa123’))<br>    print(re.fullmatch(re_str, ‘123’))<br><code>123前面有0个或者多个字符，并且每个字符都是数字字符</code><br>    re_str = r’\d<em>123’<br>    print(re.fullmatch(re_str, ‘12123’))<br>    print(re.fullmatch(re_str, ‘123’))<br>    re_str = r’[a-z]</em>123’<br>    print(re.fullmatch(re_str, ‘huagh123’))<br>    print(re.fullmatch(re_str, ‘123’)<br><code>2 +(匹配1次或多次)</code><br>    re_str = r’a+123’<br>    print(re.fullmatch(re_str, ‘aaa123’))<br>    print(re.fullmatch(re_str, ‘a123’))<br><code>3 ?(匹配0次或者1次)</code><br>    re_str = r’+?abc’<br>    print(re.fullmatch(re_str, ‘+abc’))<br><code>练习：写一个正则表达式能够匹配所有的整数字符串
+    1233
+    +233
+    -384
+    00233 不是整数</code><br>    re_str = r’[+-]?[1-9]\d*’<br>    print(re.fullmatch(re_str, ‘389’))<br><code>4 {}
+    &quot;&quot;&quot;
+    {M,N} - 匹配M到N次(最少M次，最多N次)
+    {M,}  - 匹配至少M次
+    {,N}  - 匹配最多N次
+    {N}   - 匹配N次</code><br>    print(re.fullmatch(r’a{2,5}’, ‘aaaaa’))<br>    print(re.fullmatch(r’a{2,}’, ‘aaa’))<br>    print(re.fullmatch(r’a{,3}’, ‘aa’))<br>    print(re.fullmatch(r’a{4}’, ‘aaaa’))<br>`</p>
+<pre><code># 密码：6~16位，只能包含数字和字母
+</code></pre><p><code>print(re.fullmatch(r&#39;[a-zA-Z\d]{6,16}&#39;, &#39;3u2222&#39;))</code></p>
+<h1 id="1-分之"><a href="#1-分之" class="headerlink" title="1 |(分之)"></a>1 |(分之)</h1><p>表达式1|表达式2|表达式3  - 先用表达式进行匹配，匹配成功就直接成功；<br>                        不成功就使用表达式2去匹配；匹配失败再用表达式3去匹配…以此类推<br>                        (三个表达式中只要有一个能够匹配成功就成功，否则匹配失败)</p>
+<h1 id="2-分组"><a href="#2-分组" class="headerlink" title="2 ()(分组)"></a>2 ()(分组)</h1><p>a.分组 - 将括号中的内容看成一个整体<br><code>(abc){2}  --&gt; abcabc
+abc{2}  --&gt; abcc</code><br>b.分组重复 - 在有分组的正则表达式中，可以在分组后面通过’\数字’来重复前面第几个分组匹配到的内容<br><code>(\d{2})abc\1  --&gt; 78abc78</code><br><code>re_str = r&#39;[a-z]{3}|\d{3}&#39;
+print(re.fullmatch(re_str, &#39;384&#39;))
+re_str = r&#39;abc([A-Z]{2}|\d{2})&#39;
+print(re.fullmatch(re_str, &#39;abcKD&#39;))
+re_str = r&#39;(abc){2}&#39;
+print(re.fullmatch(re_str, &#39;abcabc&#39;))
+re_str = r&#39;(\d{2})a(\d{3})bc\2{2}\1&#39;
+print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))</code></p>
 
             </div>
             <hr>
@@ -638,7 +640,7 @@ xiaoming ALL=(ALL)      ALL        (自己添加的，xiaoming是用户名)
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">leejune</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/20/Linux指令/" class="b-link-green">linux指令</a>
+                    <a href="/2019/02/21/正则表达式/" class="b-link-green">正则表达式（python3）</a>
                 </p>
             </div>
         </div>
@@ -660,7 +662,7 @@ xiaoming ALL=(ALL)      ALL        (自己添加的，xiaoming是用户名)
         repo: '',
         owner: '',
         admin: null,
-        id: '2019-02-20T16-44-56',
+        id: '2019-02-21T09-25-59',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -679,7 +681,7 @@ xiaoming ALL=(ALL)      ALL        (自己添加的，xiaoming是用户名)
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Wed Feb 20 2019 16:44:56 GMT+0800',
+    id: 'Thu Feb 21 2019 09:25:59 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -705,7 +707,8 @@ gitment.render('gitment-content');
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/02/21/正则表达式/">
                     <div class="card-image">
@@ -720,9 +723,9 @@ gitment.render('gitment-content');
                     <div class="summary">1.什么是正则表达式(语法通用)正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符
 2.python对正则表达式的支持通过re模块提供相应支持正则表达式的方法a.fullmatch(正则表达式, 字符串)  –&gt; 用正则</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -735,6 +738,7 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -742,7 +746,7 @@ gitment.render('gitment-content');
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="fa fa-dot-circle-o"></i>
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2019/02/20/Linux指令/">
@@ -775,7 +779,6 @@ Linux指令系统：
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -836,13 +839,6 @@ Linux指令系统：
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
