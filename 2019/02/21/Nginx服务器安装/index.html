@@ -4,9 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="正则表达式（python3）, leejune">
-    <meta name="description" content="#1.什么是正则表达式(语法通用)正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符
-#2.python对正则表达式的支持通过re模块提供相应支持正则表达式的方法a.fullmatch(正则表达式, 字符串)  –&amp;gt; 用">
+    <meta name="keywords" content="Nginx服务器, leejune">
+    <meta name="description" content="Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
+
+2. 安装nginxa) 添加nginx存储库  
+    yum in">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>正则表达式（python3） | leejune</title>
+    <title>Nginx服务器 | leejune</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -288,13 +290,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        正则表达式（python3）
+                        Nginx服务器
                     </div>
                 </div>
             </div>
@@ -394,8 +396,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python3/" class="post-category" target="_blank">
-                                python3
+                            <a href="/categories/服务器/" class="post-category" target="_blank">
+                                服务器
                             </a>
                         
                     </div>
@@ -413,14 +415,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        2.1k
+                        481
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        8 Min
+                        1 Min
                     </div>
                     
                 
@@ -436,133 +438,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>#1.什么是正则表达式(语法通用)<br>正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符</p>
-<p>#2.python对正则表达式的支持<br>通过re模块提供相应支持正则表达式的方法<br>a.fullmatch(正则表达式, 字符串)  –&gt; 用正则表达式来和指定字符串进行匹配，<br>                                   如果匹配成功返回匹配对象，匹配失败返回None<br>python正的正则表达式是写在字符串中的，但是一般情况下会在最前面加r/R</p>
-<pre><code>from  re import fullmatch, search
-</code></pre><h1 id="0-普通字符-代表字符本身"><a href="#0-普通字符-代表字符本身" class="headerlink" title="0  普通字符(代表字符本身)"></a>0  普通字符(代表字符本身)</h1><pre><code> # 匹配一个字符串，只有三个字符，每个字符分别是a,b,c
-    re_str = r&#39;abc&#39;
-    result = fullmatch(re_str, &#39;abc&#39;)
-    print(result)
-</code></pre><h1 id="1-匹配任意字符"><a href="#1-匹配任意字符" class="headerlink" title="1  .(匹配任意字符)"></a>1  .(匹配任意字符)</h1><p> 注意：a. 一个.代表一个字符<br>                 b.不同匹配\n</p>
-<pre><code># 匹配一个字符串，只有三个字符，第一个字符是a, 第二个字符是任意字符，最后一个字符是c
-</code></pre><pre><code>    re_str = r&#39;a.c&#39;
-    result = fullmatch(re_str, &#39;a\rc&#39;)
-    print(result)
-</code></pre><h1 id="2-w-匹配字母数字下划线中文"><a href="#2-w-匹配字母数字下划线中文" class="headerlink" title="2 \w(匹配字母数字下划线中文)"></a>2 \w(匹配字母数字下划线中文)</h1><p>   注意：a. 也可以匹配中文<br>               b. 一个\w只能匹配一个字符</p>
-<pre><code>    # 匹配一个字符串，第一个字符是任意字符，第二个和第三个字符是字母、数字或者_, 最后是三个是abc
-    re_str = r&#39;.\w\wabc&#39;
-    result = fullmatch(re_str, &#39;o胡habc&#39;)
-    print(result)
-</code></pre><h1 id="3-s-匹配空白字符"><a href="#3-s-匹配空白字符" class="headerlink" title="3 \s(匹配空白字符)"></a>3 \s(匹配空白字符)</h1><p>   空白字符：指的是所有能产生空白的字符，包括空格、制表符、换行等<br>   匹配一个字符串，前两个字符是字母、数字、下划线或者中文，第三个字符是空白，最后一个字符是任意字符</p>
-<pre><code>    re_str = r&#39;\w\w\s.&#39;
-    result = fullmatch(re_str, &#39;a2\t)&#39;)
-    print(result)
-</code></pre><h1 id="4-d-匹配数字字符"><a href="#4-d-匹配数字字符" class="headerlink" title="4 \d(匹配数字字符)"></a>4 \d(匹配数字字符)</h1><p>   匹配一个字符串有三个字符，每个字符都是数字字符</p>
-<pre><code>    re_str = r&#39;\d\d\d&#39;
-    result = fullmatch(re_str, &#39;380&#39;)
-    print(result)
-</code></pre><h1 id="5-b-检测单词边界"><a href="#5-b-检测单词边界" class="headerlink" title="5 \b(检测单词边界)"></a>5 \b(检测单词边界)</h1><p>   a.检测正则表达式中\b所在的位置是否是单词边界<br>   b.单词边界：所有可以将两个单词区分开的符号都是单词边界,例如: 空格, 缩进, 标点符号等,单词开头、单词结尾</p>
-<p>  注意：\b不是匹配符号，不会匹配出一个字符，只是检测所在的位置是否满足要求。</p>
-<pre><code># 匹配一个字符串的内容是&#39;how are&#39;,并且要求字符&#39;a&#39;的前面是单词边界
-</code></pre><pre><code>    re_str = r&#39;\bhow\b,are&#39;
-    result = fullmatch(re_str, &#39;how,are&#39;)
-    print(result)
-
-    print(fullmatch(r&#39;\b\d\d\d&#39;, &#39;234&#39;))
-    print(search(r&#39;\b\d\d\d\b&#39;, &#39;sjsd90, 783,&#39;))
-</code></pre><h1 id="6-检测字符串开头"><a href="#6-检测字符串开头" class="headerlink" title="6 ^(检测字符串开头)"></a>6 ^(检测字符串开头)</h1><p>   匹配一个字符串是三个数字字符，并且第一个字符所在的位置是字符串开头</p>
-<pre><code>    re_str = &#39;^\d\d\d&#39;
-    result = search(re_str, &#39;789sjhsdjjh7892sss&#39;)
-    print(result)
-</code></pre><h1 id="7-检测字符串结尾"><a href="#7-检测字符串结尾" class="headerlink" title="7 $(检测字符串结尾)"></a>7 $(检测字符串结尾)</h1><p>   匹配一个字符串是三个数字字符，并且最后一个字符的后面是字符串结尾</p>
-<pre><code>    re_str = r&#39;\d\d\d$&#39;
-    result = search(re_str, &#39;sjss873ssjkd900&#39;)
-    print(result)
-</code></pre><pre><code># 8 \B(检测非单词边界)
-</code></pre><pre><code>    re_str = r&#39;abc\B123&#39;
-    result = fullmatch(re_str, &#39;abc123&#39;)
-    print(result)
-</code></pre><h1 id="9-W-匹配非数字字母下划线中文"><a href="#9-W-匹配非数字字母下划线中文" class="headerlink" title="9  \W(匹配非数字字母下划线中文)"></a>9  \W(匹配非数字字母下划线中文)</h1><h1 id="10-S-匹配非空白字符"><a href="#10-S-匹配非空白字符" class="headerlink" title="10 \S(匹配非空白字符)"></a>10 \S(匹配非空白字符)</h1><h1 id="11-D-匹配非数字字符"><a href="#11-D-匹配非数字字符" class="headerlink" title="11 \D(匹配非数字字符)"></a>11 \D(匹配非数字字符)</h1><h1 id="12、-字符集"><a href="#12、-字符集" class="headerlink" title="12、 字符集"></a>12、 <a href="匹配字符集中的任意一个字符">字符集</a></h1><p>   注意： 一个[]代表一个字符<br>   a.普通用法<br>   [字符集]  -  匹配字符集中的任意一个字符<br>   b.表示范围<br>    [字符1-字符2]  - 匹配字符1到字符2中所有的字符。要求字符1的编码值要小于字符2的编码值<br>    [1-9]  -  数字1到9<br>    [a-z]  - 小写字母<br>    [A-Z]  - 大写字母<br>    [a-zA-Z]    - 所有字母<br>    [a-zA-Z\d_] - 数字字母下划线</p>
-<h1 id="匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’-后边是123"><a href="#匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’-后边是123" class="headerlink" title="匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’, 后边是123"></a>匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’, 后边是123</h1><pre><code>    re_str = r&#39;[abc]123&#39;
-    result = fullmatch(re_str, &#39;b123&#39;)
-    print(result)
-</code></pre><h1 id="匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字"><a href="#匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字" class="headerlink" title="匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字"></a>匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字</h1><pre><code>    re_str = r&#39;[1-7]\d\d[a-z]&#39;
-    result = fullmatch(re_str, &#39;212g&#39;)
-    print(result)
-
-    re_str = r&#39;[a-zA-Z\d_]&#39;
-    result = fullmatch(re_str, &#39;9&#39;)
-    print(result)
-</code></pre><h1 id="13-字符集-匹配没有在字符集中的其他任意字符"><a href="#13-字符集-匹配没有在字符集中的其他任意字符" class="headerlink" title="13 [^字符集] - 匹配没有在字符集中的其他任意字符"></a>13 [^字符集] - 匹配没有在字符集中的其他任意字符</h1><p>  注意：^放在[]的最前面才表示匹配不在字符集中的其他任意字符;^如果不放在[]的最前面，就表示字符^本身<br>  匹配一个字符串，第一个字符只要不是abc中的一个其他字符都可以，后面是123</p>
-<pre><code>    re_str = r&#39;[^abc]123&#39;
-    result = fullmatch(re_str, &#39;胡123&#39;)
-    print(result)
-</code></pre><p>  第一个字符只要不是1-9中的任意一个其他都可以</p>
-<pre><code>    re_str = r&#39;[^1-9]123&#39;
-    result = fullmatch(re_str, &#39;s123&#39;)
-    print(result)
-</code></pre><p>  第一个字符是1-9中的一个或者是^</p>
-<pre><code>    re_str = r&#39;[1-9^]123&#39;
-    result = fullmatch(re_str, &#39;^123&#39;)
-    print(result)
-</code></pre><p> #14  转义符号<br>  a.正则中也可以通过在特殊符号前加’\’来对符号进行转义</p>
-<p>  \ -  \字符<br>    . - .字符<br>    \^ -  ^字符</p>
-<p> b.除了在中括号中有特殊意义的符号，其他符号放在[]中也是表示符号本身</p>
-<pre><code> - ：在中括号中的两个字符之间表示谁到谁；如果想要表示它本身就不要放在两个字符之间
- ^:  在中括号中的最前面有特殊意义；如果想要表示它本身就不要放在最前面
- []: 在中括号中表示[],要加\
-</code></pre><p>   注意： 转义字符是字符串中的概念<br>          转义符号是正则表达式的概念</p>
-<pre><code>    re_str = r&#39;\(\^\d\d\.\)\d\d\\b&#39;
-    print(fullmatch(re_str, r&#39;(^23.)45\b&#39;))
-
-    print(fullmatch(r&#39;[-19.\]*^]&#39;, &#39;*&#39;))
-</code></pre><h1 id="1-匹配0次或多次"><a href="#1-匹配0次或多次" class="headerlink" title="1 *(匹配0次或多次)"></a>1 *(匹配0次或多次)</h1><p>   字符*  - 指定的字符出现0次或者多次(这儿的字符可以是正则符号，也可以是普通字符)</p>
-<p>   a<em> - a出现0次或者多次<br>    \d</em> - 任意数字出现0次或者多次<br>    [a-z]* - 任意小写字母出现0次或多次<br>   123前面有0个或者多个字符，并且每个字符都是a</p>
-<pre><code>    re_str = r&#39;a*123&#39;
-    print(re.fullmatch(re_str, &#39;aaa123&#39;))
-    print(re.fullmatch(re_str, &#39;123&#39;))
-</code></pre><pre><code>123前面有0个或者多个字符，并且每个字符都是数字字符
-</code></pre><pre><code>    re_str = r&#39;\d*123&#39;
-    print(re.fullmatch(re_str, &#39;12123&#39;))
-    print(re.fullmatch(re_str, &#39;123&#39;))
-    re_str = r&#39;[a-z]*123&#39;
-    print(re.fullmatch(re_str, &#39;huagh123&#39;))
-    print(re.fullmatch(re_str, &#39;123&#39;)
-</code></pre><p> 2 +(匹配1次或多次)</p>
-<pre><code>    re_str = r&#39;a+123&#39;
-    print(re.fullmatch(re_str, &#39;aaa123&#39;))
-    print(re.fullmatch(re_str, &#39;a123&#39;))
-</code></pre><p>  3 ?(匹配0次或者1次)</p>
-<pre><code>    re_str = r&#39;\+?abc&#39;
-    print(re.fullmatch(re_str, &#39;+abc&#39;))
-</code></pre><p>   练习：写一个正则表达式能够匹配所有的整数字符串<br>    1233<br>    +233<br>    -384<br>    00233 不是整数</p>
-<pre><code>    re_str = r&#39;[+-]?[1-9]\d*&#39;
-    print(re.fullmatch(re_str, &#39;389&#39;))
-</code></pre><p>   4 {}<br>    “””<br>    {M,N} - 匹配M到N次(最少M次，最多N次)<br>    {M,}  - 匹配至少M次<br>    {,N}  - 匹配最多N次<br>    {N}   - 匹配N次</p>
-<pre><code>    print(re.fullmatch(r&#39;a{2,5}&#39;, &#39;aaaaa&#39;))
-    print(re.fullmatch(r&#39;a{2,}&#39;, &#39;aaa&#39;))
-    print(re.fullmatch(r&#39;a{,3}&#39;, &#39;aa&#39;))
-    print(re.fullmatch(r&#39;a{4}&#39;, &#39;aaaa&#39;))
-</code></pre><pre><code># 密码：6~16位，只能包含数字和字母
-</code></pre><pre><code>    print(re.fullmatch(r&#39;[a-zA-Z\d]{6,16}&#39;, &#39;3u2222&#39;))
-</code></pre><h1 id="1-分之"><a href="#1-分之" class="headerlink" title="1 |(分之)"></a>1 |(分之)</h1><p>表达式1|表达式2|表达式3  - 先用表达式进行匹配，匹配成功就直接成功；<br>                        不成功就使用表达式2去匹配；匹配失败再用表达式3去匹配…以此类推<br>                        (三个表达式中只要有一个能够匹配成功就成功，否则匹配失败)</p>
-<h1 id="2-分组"><a href="#2-分组" class="headerlink" title="2 ()(分组)"></a>2 ()(分组)</h1><p>a.分组 - 将括号中的内容看成一个整体</p>
-<pre><code>(abc){2}  --&gt; abcabc
-abc{2}  --&gt; abcc 
-</code></pre><p>b.分组重复 - 在有分组的正则表达式中，可以在分组后面通过’\数字’来重复前面第几个分组匹配到的内容</p>
-<pre><code>(\d{2})abc\1  --&gt; 78abc78
-</code></pre><pre><code>re_str = r&#39;[a-z]{3}|\d{3}&#39;
-print(re.fullmatch(re_str, &#39;384&#39;))
-
-re_str = r&#39;abc([A-Z]{2}|\d{2})&#39;
-print(re.fullmatch(re_str, &#39;abcKD&#39;))
-
-re_str = r&#39;(abc){2}&#39;
-print(re.fullmatch(re_str, &#39;abcabc&#39;))
-
-re_str = r&#39;(\d{2})a(\d{3})bc\2{2}\1&#39;
-print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
+                <h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
+<p><img src="./img/aliyun0.png" alt="打开安全组设置"><br><img src="./img/aliyun2.png" alt><br><img src="./img/aliyun3.png" alt><br><img src="./img/aliyun4.png" alt></p>
+<h3 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2. 安装nginx"></a>2. 安装nginx</h3><p>a) 添加nginx存储库  </p>
+<pre class=" language-python"><code class="language-python">    yum install epel<span class="token operator">-</span>release
 </code></pre>
+<p>b) 安装nginx</p>
+<pre class=" language-python"><code class="language-python">    yum install nginx
+</code></pre>
+<p>c) 运行nginx<br>Nginx不会自行启动。要运行Nginx  </p>
+<pre><code>    systemctl start nginx
+</code></pre><p>nginx的运行命令:  </p>
+<pre><code>    systemctl status nginx 查看nginx的状态  
+    systemctl start/stop/enable/disable nginx 启动/关闭/设置开机启动/禁止开机启动  
+</code></pre><p>d) 系统启动时启动Nginx  </p>
+<pre><code>    systemctl enable nginx
+</code></pre><p>e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信：   </p>
+<pre><code>    sudo firewall-cmd --permanent --zone=public --add-service=http 
+
+    sudo firewall-cmd --permanent --zone=public --add-service=https
+
+    sudo firewall-cmd --reload
+</code></pre><h3 id="3-nginx目录共享配置"><a href="#3-nginx目录共享配置" class="headerlink" title="3.nginx目录共享配置"></a>3.nginx目录共享配置</h3><p>a) 在contOS目录中确定一个需要共享的文件夹，例如： /home/yuting<br>b) 打开 etc/nginx/nginx.conf 文件，设置server</p>
+<pre><code>    #共享设置 - 在浏览器中输入服务器ip地址，会展示共享目录的文件列表
+    root /home/yuting;
+    location / {
+           autoindex on;
+           autoindex_exact_size on;
+           autoindex_localtime on;
+    }  
+</code></pre><p>除了可以共享文件，还可以自定义页面</p>
+<pre><code>    #自定义服务器页面
+    location / {
+            root /home/yuting;
+            index index.html index.htm;
+    }
+</code></pre><p>注意： 如果出现权限问题，可以修改目录的权限  </p>
+<h1 id="ssh密钥认证"><a href="#ssh密钥认证" class="headerlink" title="ssh密钥认证"></a>ssh密钥认证</h1><p>1.在主机和从机上执行：<code>ssh-keygen</code></p>
+<p>2.在从机上执行:  <code>scp  id_rsa.pub  root@主机地址:~/.ssh/master.pub</code><br>(上面这条指令是将从机上的 id_rsa.pub文件拷贝传递给到主机的.ssh文件夹下，并且命名为’master.pub’)</p>
+<p>3.在主机中的.ssh文件夹中创建authorized_keys文件： <code>touch authorized_keys</code> </p>
+<p>4.修改文件authorized_keys的权限: <code>chmod 600  authorized_keys</code>  </p>
+<p>5.将master.pub放进authorized_keys文件中:  <code>cat master.pub &gt;&gt;  authorized_keys</code></p>
+<p>6.在操作主机的时候，需要主机能够自己免密访问自己就将自己的公钥放在自己的authorized_keys文件中</p>
+
             </div>
             <hr>
 
@@ -702,7 +620,7 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
                     </span>
                     <a href="https://leejunepython2019.github.io" class="b-link-green">leejune</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/21/正则表达式/" class="b-link-green">正则表达式（python3）</a>
+                    <a href="/2019/02/21/Nginx服务器安装/" class="b-link-green">Nginx服务器</a>
                 </p>
             </div>
         </div>
@@ -727,20 +645,21 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/02/21/Nginx服务器安装/">
+                <a href="/2019/02/21/MySQL配置/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Nginx服务器">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="MySQL配置">
                         
-                        <span class="card-title">Nginx服务器</span>
+                        <span class="card-title">MySQL配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
+                    <div class="summary">MySQL配置  
 
-2. 安装nginxa) 添加nginx存储库  
-    yum in</div>
+下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm  
+
+安装MySQL源: yum locali</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -749,8 +668,8 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/服务器/" class="post-category" target="_blank">
-                                    服务器
+                            <a href="/categories/MySQL/" class="post-category" target="_blank">
+                                    MySQL
                                 </a>
                             
                             
@@ -767,30 +686,28 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/20/Linux指令/">
+                <a href="/2019/02/21/正则表达式/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="linux指令">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="正则表达式（python3）">
                         
-                        <span class="card-title">linux指令</span>
+                        <span class="card-title">正则表达式（python3）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">连接云服务器：1.连接服务器:    ssh  root@ip地址2.退出:  logout
-Linux指令系统：
-命令名称 [命名参数] [命令对象]
-一、日常操作1.cd指令       - 进入指定文件夹cd  目录     - 进入</div>
+                    <div class="summary">#1.什么是正则表达式(语法通用)正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符
+#2.python对正则表达式的支持通过re模块提供相应支持正则表达式的方法a.fullmatch(正则表达式, 字符串)  –&gt; 用</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/linux/" class="post-category" target="_blank">
-                                    linux
+                            <a href="/categories/python3/" class="post-category" target="_blank">
+                                    python3
                                 </a>
                             
                             
