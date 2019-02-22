@@ -4,45 +4,50 @@
   
     
     <entry>
-      <title></title>
+      <title>vim编辑器之神</title>
       <link href="/2019/02/22/vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E7%A5%9E/"/>
       <url>/2019/02/22/vim%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8B%E7%A5%9E/</url>
       
         <content type="html"><![CDATA[<h1 id="vim编辑器之神"><a href="#vim编辑器之神" class="headerlink" title="vim编辑器之神"></a>vim编辑器之神</h1><h3 id="配置vimrc配置"><a href="#配置vimrc配置" class="headerlink" title="配置vimrc配置"></a>配置vimrc配置</h3><p>在shell中可以通过 <code>vim ~/.vimrc</code> 或者 <code>vim /etc/vimrc</code> 打开vimrc文件对vim进行配置。在这个文件中可以进行很多和vim相关的配置，常用的如下（如果对其他配置感兴趣的可以自己百度）：</p><p><img src="http://pnbdq6q26.bkt.clouddn.com/vim1.png" alt> </p><h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><h4 id="1-模式切换"><a href="#1-模式切换" class="headerlink" title="1.模式切换"></a>1.模式切换</h4><p>我们可以将vim分为命令模式、编辑模式和末行模式三种<br><strong>命令模式：</strong>进入vim的时候vim是处于命令模式状态下的，这个时候输入内容不会出现在编辑区  (最末什么都没有)</p><p><strong>末行模式：</strong>在命令模式下输入冒号，让vim进入末行模式。在末行模式的冒号后面可以输入相关的一些指令进行相关操作  (最后有一个冒号)</p><p><strong>编辑模式：</strong>在命令模式下按’i’进入编辑模式。在编辑模式下可以对文件内容进行编辑 (最后 –INSERT– 或者 –插入–)  </p><p>####2.保存和退出<br>在末行模式下输入相应的指令可以对编辑区的内容进行保存和退出vim界面<br><strong>w</strong> – 只保存(类似快捷键ctr+s)<br><strong>q</strong> – 退出（在编辑区的内容全部都保存的情况下才有效）<br><strong>wq</strong> – 保存并退出<br><strong>q!</strong>  – 强制退出（不保存修改信息）    </p><p>####3.光标操作<br>以下光标操作都是在命令模式下输入的<br><strong>^(shift+6)</strong>  – 移动到行首<br><strong>$(shift+4)</strong>  – 移动到行尾<br><strong>G(shift+g)</strong>    – 移动到文件末尾<br><strong>行号G</strong>            – 移动到指定行,例如:30G, 让光标直接跳转到行号是30的那一行<br><strong>gg</strong>                – 移动到文件开头  </p><p>####4.文本操作<br>以下操作不带冒号的是在命令模式下输入，前面有冒号代码后面的内容是在末行模式下输入<br><strong>dd</strong>            – 删除光标所在的行<br><strong>数字dd</strong>        – 从光标所在行开始往后面开始删，删除指定数量行内容<br><strong>:%d</strong>        – 删除所有     </p><p><strong>yy</strong>         – 复制光标所在的行<br><strong>数字yy</strong>        – 从光标所在行开始复制指定行数的内容<br><strong>p</strong>            – 将复制的内容粘贴到光标所在的位置<br><strong>u</strong>            – 撤销<br><strong>ctr+r</strong>    – 反撤销    </p><p><strong>:%!sort</strong>  – 对内容排序  </p><p><strong>:/查找对象[/gice]</strong>    – 搜索匹配正则表达式的内容，按回车回到命令模式后按n往前查找，按N往后查找  </p><p>*<em>:1,$s/被替换对象/替换内容[/gice</em>]*    – 将正则表达式匹配到的内容替换成指定内容   </p><pre><code>-    g: 全局匹配  -     i: 忽略大小写 -   c: 替换时需要提示  -   e: 忽略错误  </code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> vim </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title></title>
+      <title>Hexo博客搭建</title>
       <link href="/2019/02/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
       <url>/2019/02/21/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
       
         <content type="html"><![CDATA[<p>Hexo博客搭建   </p><h1 id="1-搭建博客"><a href="#1-搭建博客" class="headerlink" title="1. 搭建博客"></a>1. 搭建博客</h1><p>使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   </p><ol><li>首先在自己的电脑上创建一个空的文件夹’Hexo’  </li><li>在gitbash中终端中通过<code>cd</code>指令进入到刚才创建的文件夹中   </li><li>输入指令 <code>npm install -g hexo</code> 安装Hexo  </li><li>输入指令 <code>hexo init</code> 进行初始化  </li><li>依次输入指令<code>npm install</code> <code>hexo server</code> 启动服务器<br> 博客内容发生改变后可以通过<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> <code>hexo server</code>刷新后重新启动    </li></ol><h1 id="2-部署博客"><a href="#2-部署博客" class="headerlink" title="2. 部署博客"></a>2. 部署博客</h1><ol><li>在github上创建一个空的仓库，仓库名： <code>用户名.github.io</code>  </li><li><p>修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容<br><img src="/Users/yuting/Desktop/Hexo/image1.png" alt>  </p></li><li><p>使用git部署, 输入指令<code>npm install hexo-deployer-git --save</code>  </p></li><li>输入指令<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> 对博客进行提交</li></ol>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>git常用指令</title>
-      <link href="/2019/02/21/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
-      <url>/2019/02/21/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
-      
-        <content type="html"><![CDATA[<h1 id="git常用指令"><a href="#git常用指令" class="headerlink" title="git常用指令"></a>git常用指令</h1><h2 id="1-基本指令"><a href="#1-基本指令" class="headerlink" title="1.基本指令"></a>1.基本指令</h2><p><code>git init</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  新建git仓库<br><code>git add 文件/文件夹</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  将文件添加到缓存区中<br><code>git add -A</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — 添加所有内容到缓存区中<br><code>git stutas</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———    查看git状态<br><code>git commit -m  ‘提交信息’</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  将缓存区中的内容全部提交到git本地仓库中  </p><p><code>git log</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——-    查看提交日志  </p><p><code>git reset  - - hard   HEAD</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——   让工作目录中的内容和仓库中的内容保持一致<br><code>git reset  --hard HEAD^</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  回到上一个版本<br><code>git  reset  - - hard 版本号</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  回到指定的版本<br><code>git checkout  - -  文件名</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  从暂存区中恢复工作目录中的内容(让工作区中的指定文件，回到上次提交的时候的状态)  </p><p><code>git clone &lt;url&gt;</code> - 将服务器上的项目(仓库)克隆 (使用https地址需要输入密码，使用ssh地址需要添加公钥)  </p><p><code>git remote add origin 地址</code>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—– 关联远程仓库(只需要关联一次)</p><p><code>git push [-u] origin master</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—– 提交(-u在第一次提交分之的时候才用)  </p><h2 id="2-分之管理"><a href="#2-分之管理" class="headerlink" title="2.分之管理"></a>2.分之管理</h2><p>创建仓库会默认给我们创建一个master分之,这个分之一般作为提交和发布分之;开发一般会自己创建一个develop分之，用来开发和测试;多人协作的时候还可能根据不同的人或者(不同的功能)创建不同的分之，用来独立开发  </p><p>常见分之： master(主要是合并develop), develop(主要合并下面的其他分支), 功能/人员分之(开发)  </p><p><code>git branch [-a]</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        - 查看分之<br><code>git branch 分之名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 创建分之<br><code>git checkout   分支名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-   切换分之<br><code>git checkout -b 分之名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    - 切换并创建新的分之<br><code>git diff    分之1  分之2</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 查看两个分之之间的差异<br><code>git merge 分之名</code>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 让当前分之和指定分之进行合并     </p><p>注意: 切换分之、push、pull，这些操作前要保证工作区是clean  </p><p>怎么避免冲突：  不要发生多个分之对同一个文件在同一个版本下进行修改(和同伴确认和商量)</p>]]></content>
-      
-      
       <categories>
           
-          <category> git </category>
+          <category> hexo </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -63,6 +68,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -82,6 +93,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -96,10 +113,16 @@
       
       <categories>
           
-          <category> python3 </category>
+          <category> python3,正则表达式 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> python3,正则表达式 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -119,6 +142,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
       
     </entry>
     
