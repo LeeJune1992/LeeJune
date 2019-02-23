@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="">
+<html lang="zh-CN">
 
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="正则表达式（python3）, leejune">
-    <meta name="description" content="#1.什么是正则表达式(语法通用)正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符
-#2.python对正则表达式的支持通过re模块提供相应支持正则表达式的方法a.fullmatch(正则表达式, 字符串)  –&amp;gt; 用">
+    <meta name="keywords" content="进制与位运算, leejune">
+    <meta name="description" content="一、进制在计算机编程中，整数可以通过十进制、二进制、八进制和十六进制来表示
+1.十进制a.基数：0，1，2，3，4，5，6，7，8，9b.进位：逢10进1c.位权：123(10) = 310**0 + 2101 + 1*102
+2.二进制a">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>正则表达式（python3） | leejune</title>
+    <title>进制与位运算 | leejune</title>
     <link rel="icon" type="image/png" href="http://pnbdq6q26.bkt.clouddn.com/favicon.JPG">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -60,7 +61,7 @@
             
             <i class="fa fa-home"></i>
             
-            <span>Index</span>
+            <span>Home</span>
         </a>
     </li>
     
@@ -69,7 +70,7 @@
             
             <i class="fa fa-tags"></i>
             
-            <span>Tags</span>
+            <span>标签</span>
         </a>
     </li>
     
@@ -78,7 +79,7 @@
             
             <i class="fa fa-bookmark"></i>
             
-            <span>Categories</span>
+            <span>分类</span>
         </a>
     </li>
     
@@ -87,7 +88,7 @@
             
             <i class="fa fa-archive"></i>
             
-            <span>Archives</span>
+            <span>归档</span>
         </a>
     </li>
     
@@ -96,7 +97,7 @@
             
             <i class="fa fa-user-circle-o"></i>
             
-            <span>About</span>
+            <span>关于</span>
         </a>
     </li>
     
@@ -105,13 +106,13 @@
             
             <i class="fa fa-address-book"></i>
             
-            <span>Friends</span>
+            <span>友情链接</span>
         </a>
     </li>
     
     <li>
         <a id="toggleSearch" class="waves-effect waves-light">
-            <i id="searchIcon" class="mdi-action-search" title="Search"></i>
+            <i id="searchIcon" class="mdi-action-search" title="搜索"></i>
         </a>
     </li>
 
@@ -126,7 +127,7 @@
         <div class="logo-name">leejune</div>
         <div class="logo-desc">
             
-            一个python后端小白
+            一个python小白
             
         </div>
     </div>
@@ -140,7 +141,7 @@
                 
                 <i class="fa fa-fw fa-home"></i>
                 
-                Index
+                Home
             </a>
         </li>
         
@@ -149,7 +150,7 @@
                 
                 <i class="fa fa-fw fa-tags"></i>
                 
-                Tags
+                标签
             </a>
         </li>
         
@@ -158,7 +159,7 @@
                 
                 <i class="fa fa-fw fa-bookmark"></i>
                 
-                Categories
+                分类
             </a>
         </li>
         
@@ -167,7 +168,7 @@
                 
                 <i class="fa fa-fw fa-archive"></i>
                 
-                Archives
+                归档
             </a>
         </li>
         
@@ -176,7 +177,7 @@
                 
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
-                About
+                关于
             </a>
         </li>
         
@@ -185,7 +186,7 @@
                 
                 <i class="fa fa-fw fa-address-book"></i>
                 
-                Friends
+                友情链接
             </a>
         </li>
         
@@ -284,13 +285,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        正则表达式（python3）
+                        进制与位运算
                     </div>
                 </div>
             </div>
@@ -382,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python3-正则表达式/" target="_blank">
-                                <span class="chip bg-color">python3,正则表达式</span>
+                            <a href="/tags/进制与位运算/" target="_blank">
+                                <span class="chip bg-color">进制与位运算</span>
                             </a>
                         
                     </div>
@@ -394,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python3-正则表达式/" class="post-category" target="_blank">
-                                python3,正则表达式
+                            <a href="/categories/进制与位运算/" class="post-category" target="_blank">
+                                进制与位运算
                             </a>
                         
                     </div>
@@ -405,29 +406,29 @@
 
             <div class="post-info">
                 <div class="post-date info-break-policy">
-                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-02-21
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-02-23
                 </div>
 
                 
                     
                     <div class="info-break-policy">
-                        <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        2.1k
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        1.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
-                        <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        8 Min
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        5 分
                     </div>
                     
                 
 				
 				
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
                         <span id="busuanzi_value_page_pv"></span>
                     </div>
 				
@@ -436,132 +437,78 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>#1.什么是正则表达式(语法通用)<br>正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符</p>
-<p>#2.python对正则表达式的支持<br>通过re模块提供相应支持正则表达式的方法<br>a.fullmatch(正则表达式, 字符串)  –&gt; 用正则表达式来和指定字符串进行匹配，<br>                                   如果匹配成功返回匹配对象，匹配失败返回None<br>python正的正则表达式是写在字符串中的，但是一般情况下会在最前面加r/R</p>
-<pre><code>from  re import fullmatch, search
-</code></pre><h1 id="0-普通字符-代表字符本身"><a href="#0-普通字符-代表字符本身" class="headerlink" title="0  普通字符(代表字符本身)"></a>0  普通字符(代表字符本身)</h1><pre><code> # 匹配一个字符串，只有三个字符，每个字符分别是a,b,c
-    re_str = r&#39;abc&#39;
-    result = fullmatch(re_str, &#39;abc&#39;)
-    print(result)
-</code></pre><h1 id="1-匹配任意字符"><a href="#1-匹配任意字符" class="headerlink" title="1  .(匹配任意字符)"></a>1  .(匹配任意字符)</h1><p> 注意：a. 一个.代表一个字符<br>                 b.不同匹配\n</p>
-<pre><code># 匹配一个字符串，只有三个字符，第一个字符是a, 第二个字符是任意字符，最后一个字符是c
-</code></pre><pre><code>    re_str = r&#39;a.c&#39;
-    result = fullmatch(re_str, &#39;a\rc&#39;)
-    print(result)
-</code></pre><h1 id="2-w-匹配字母数字下划线中文"><a href="#2-w-匹配字母数字下划线中文" class="headerlink" title="2 \w(匹配字母数字下划线中文)"></a>2 \w(匹配字母数字下划线中文)</h1><p>   注意：a. 也可以匹配中文<br>               b. 一个\w只能匹配一个字符</p>
-<pre><code>    # 匹配一个字符串，第一个字符是任意字符，第二个和第三个字符是字母、数字或者_, 最后是三个是abc
-    re_str = r&#39;.\w\wabc&#39;
-    result = fullmatch(re_str, &#39;o胡habc&#39;)
-    print(result)
-</code></pre><h1 id="3-s-匹配空白字符"><a href="#3-s-匹配空白字符" class="headerlink" title="3 \s(匹配空白字符)"></a>3 \s(匹配空白字符)</h1><p>   空白字符：指的是所有能产生空白的字符，包括空格、制表符、换行等<br>   匹配一个字符串，前两个字符是字母、数字、下划线或者中文，第三个字符是空白，最后一个字符是任意字符</p>
-<pre><code>    re_str = r&#39;\w\w\s.&#39;
-    result = fullmatch(re_str, &#39;a2\t)&#39;)
-    print(result)
-</code></pre><h1 id="4-d-匹配数字字符"><a href="#4-d-匹配数字字符" class="headerlink" title="4 \d(匹配数字字符)"></a>4 \d(匹配数字字符)</h1><p>   匹配一个字符串有三个字符，每个字符都是数字字符</p>
-<pre><code>    re_str = r&#39;\d\d\d&#39;
-    result = fullmatch(re_str, &#39;380&#39;)
-    print(result)
-</code></pre><h1 id="5-b-检测单词边界"><a href="#5-b-检测单词边界" class="headerlink" title="5 \b(检测单词边界)"></a>5 \b(检测单词边界)</h1><p>   a.检测正则表达式中\b所在的位置是否是单词边界<br>   b.单词边界：所有可以将两个单词区分开的符号都是单词边界,例如: 空格, 缩进, 标点符号等,单词开头、单词结尾</p>
-<p>  注意：\b不是匹配符号，不会匹配出一个字符，只是检测所在的位置是否满足要求。</p>
-<pre><code># 匹配一个字符串的内容是&#39;how are&#39;,并且要求字符&#39;a&#39;的前面是单词边界
-</code></pre><pre><code>    re_str = r&#39;\bhow\b,are&#39;
-    result = fullmatch(re_str, &#39;how,are&#39;)
-    print(result)
-
-    print(fullmatch(r&#39;\b\d\d\d&#39;, &#39;234&#39;))
-    print(search(r&#39;\b\d\d\d\b&#39;, &#39;sjsd90, 783,&#39;))
-</code></pre><h1 id="6-检测字符串开头"><a href="#6-检测字符串开头" class="headerlink" title="6 ^(检测字符串开头)"></a>6 ^(检测字符串开头)</h1><p>   匹配一个字符串是三个数字字符，并且第一个字符所在的位置是字符串开头</p>
-<pre><code>    re_str = &#39;^\d\d\d&#39;
-    result = search(re_str, &#39;789sjhsdjjh7892sss&#39;)
-    print(result)
-</code></pre><h1 id="7-检测字符串结尾"><a href="#7-检测字符串结尾" class="headerlink" title="7 $(检测字符串结尾)"></a>7 $(检测字符串结尾)</h1><p>   匹配一个字符串是三个数字字符，并且最后一个字符的后面是字符串结尾</p>
-<pre><code>    re_str = r&#39;\d\d\d$&#39;
-    result = search(re_str, &#39;sjss873ssjkd900&#39;)
-    print(result)
-</code></pre><pre><code># 8 \B(检测非单词边界)
-</code></pre><pre><code>    re_str = r&#39;abc\B123&#39;
-    result = fullmatch(re_str, &#39;abc123&#39;)
-    print(result)
-</code></pre><h1 id="9-W-匹配非数字字母下划线中文"><a href="#9-W-匹配非数字字母下划线中文" class="headerlink" title="9  \W(匹配非数字字母下划线中文)"></a>9  \W(匹配非数字字母下划线中文)</h1><h1 id="10-S-匹配非空白字符"><a href="#10-S-匹配非空白字符" class="headerlink" title="10 \S(匹配非空白字符)"></a>10 \S(匹配非空白字符)</h1><h1 id="11-D-匹配非数字字符"><a href="#11-D-匹配非数字字符" class="headerlink" title="11 \D(匹配非数字字符)"></a>11 \D(匹配非数字字符)</h1><h1 id="12、-字符集"><a href="#12、-字符集" class="headerlink" title="12、 字符集"></a>12、 <a href="匹配字符集中的任意一个字符">字符集</a></h1><p>   注意： 一个[]代表一个字符<br>   a.普通用法<br>   [字符集]  -  匹配字符集中的任意一个字符<br>   b.表示范围<br>    [字符1-字符2]  - 匹配字符1到字符2中所有的字符。要求字符1的编码值要小于字符2的编码值<br>    [1-9]  -  数字1到9<br>    [a-z]  - 小写字母<br>    [A-Z]  - 大写字母<br>    [a-zA-Z]    - 所有字母<br>    [a-zA-Z\d_] - 数字字母下划线</p>
-<h1 id="匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’-后边是123"><a href="#匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’-后边是123" class="headerlink" title="匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’, 后边是123"></a>匹配一个字符串有4个字符，第一个字符是’a’或者’b’或者’c’, 后边是123</h1><pre><code>    re_str = r&#39;[abc]123&#39;
-    result = fullmatch(re_str, &#39;b123&#39;)
-    print(result)
-</code></pre><h1 id="匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字"><a href="#匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字" class="headerlink" title="匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字"></a>匹配一个字符串有4个字符，第一个字符是数字1-9中的任意一个；最后一个字符是任意小写字母；中间两个字符是任意数字</h1><pre><code>    re_str = r&#39;[1-7]\d\d[a-z]&#39;
-    result = fullmatch(re_str, &#39;212g&#39;)
-    print(result)
-
-    re_str = r&#39;[a-zA-Z\d_]&#39;
-    result = fullmatch(re_str, &#39;9&#39;)
-    print(result)
-</code></pre><h1 id="13-字符集-匹配没有在字符集中的其他任意字符"><a href="#13-字符集-匹配没有在字符集中的其他任意字符" class="headerlink" title="13 [^字符集] - 匹配没有在字符集中的其他任意字符"></a>13 [^字符集] - 匹配没有在字符集中的其他任意字符</h1><p>  注意：^放在[]的最前面才表示匹配不在字符集中的其他任意字符;^如果不放在[]的最前面，就表示字符^本身<br>  匹配一个字符串，第一个字符只要不是abc中的一个其他字符都可以，后面是123</p>
-<pre><code>    re_str = r&#39;[^abc]123&#39;
-    result = fullmatch(re_str, &#39;胡123&#39;)
-    print(result)
-</code></pre><p>  第一个字符只要不是1-9中的任意一个其他都可以</p>
-<pre><code>    re_str = r&#39;[^1-9]123&#39;
-    result = fullmatch(re_str, &#39;s123&#39;)
-    print(result)
-</code></pre><p>  第一个字符是1-9中的一个或者是^</p>
-<pre><code>    re_str = r&#39;[1-9^]123&#39;
-    result = fullmatch(re_str, &#39;^123&#39;)
-    print(result)
-</code></pre><p> #14  转义符号<br>  a.正则中也可以通过在特殊符号前加’\’来对符号进行转义</p>
-<p>  \ -  \字符<br>    . - .字符<br>    \^ -  ^字符</p>
-<p> b.除了在中括号中有特殊意义的符号，其他符号放在[]中也是表示符号本身</p>
-<pre><code> - ：在中括号中的两个字符之间表示谁到谁；如果想要表示它本身就不要放在两个字符之间
- ^:  在中括号中的最前面有特殊意义；如果想要表示它本身就不要放在最前面
- []: 在中括号中表示[],要加\
-</code></pre><p>   注意： 转义字符是字符串中的概念<br>          转义符号是正则表达式的概念</p>
-<pre><code>    re_str = r&#39;\(\^\d\d\.\)\d\d\\b&#39;
-    print(fullmatch(re_str, r&#39;(^23.)45\b&#39;))
-
-    print(fullmatch(r&#39;[-19.\]*^]&#39;, &#39;*&#39;))
-</code></pre><h1 id="1-匹配0次或多次"><a href="#1-匹配0次或多次" class="headerlink" title="1 *(匹配0次或多次)"></a>1 *(匹配0次或多次)</h1><p>   字符*  - 指定的字符出现0次或者多次(这儿的字符可以是正则符号，也可以是普通字符)</p>
-<p>   a<em> - a出现0次或者多次<br>    \d</em> - 任意数字出现0次或者多次<br>    [a-z]* - 任意小写字母出现0次或多次<br>   123前面有0个或者多个字符，并且每个字符都是a</p>
-<pre><code>    re_str = r&#39;a*123&#39;
-    print(re.fullmatch(re_str, &#39;aaa123&#39;))
-    print(re.fullmatch(re_str, &#39;123&#39;))
-</code></pre><pre><code>123前面有0个或者多个字符，并且每个字符都是数字字符
-</code></pre><pre><code>    re_str = r&#39;\d*123&#39;
-    print(re.fullmatch(re_str, &#39;12123&#39;))
-    print(re.fullmatch(re_str, &#39;123&#39;))
-    re_str = r&#39;[a-z]*123&#39;
-    print(re.fullmatch(re_str, &#39;huagh123&#39;))
-    print(re.fullmatch(re_str, &#39;123&#39;)
-</code></pre><p> 2 +(匹配1次或多次)</p>
-<pre><code>    re_str = r&#39;a+123&#39;
-    print(re.fullmatch(re_str, &#39;aaa123&#39;))
-    print(re.fullmatch(re_str, &#39;a123&#39;))
-</code></pre><p>  3 ?(匹配0次或者1次)</p>
-<pre><code>    re_str = r&#39;\+?abc&#39;
-    print(re.fullmatch(re_str, &#39;+abc&#39;))
-</code></pre><p>   练习：写一个正则表达式能够匹配所有的整数字符串<br>    1233<br>    +233<br>    -384<br>    00233 不是整数</p>
-<pre><code>    re_str = r&#39;[+-]?[1-9]\d*&#39;
-    print(re.fullmatch(re_str, &#39;389&#39;))
-</code></pre><p>   4 {}<br>    “””<br>    {M,N} - 匹配M到N次(最少M次，最多N次)<br>    {M,}  - 匹配至少M次<br>    {,N}  - 匹配最多N次<br>    {N}   - 匹配N次</p>
-<pre><code>    print(re.fullmatch(r&#39;a{2,5}&#39;, &#39;aaaaa&#39;))
-    print(re.fullmatch(r&#39;a{2,}&#39;, &#39;aaa&#39;))
-    print(re.fullmatch(r&#39;a{,3}&#39;, &#39;aa&#39;))
-    print(re.fullmatch(r&#39;a{4}&#39;, &#39;aaaa&#39;))
-</code></pre><pre><code># 密码：6~16位，只能包含数字和字母
-</code></pre><pre><code>    print(re.fullmatch(r&#39;[a-zA-Z\d]{6,16}&#39;, &#39;3u2222&#39;))
-</code></pre><h1 id="1-分之"><a href="#1-分之" class="headerlink" title="1 |(分之)"></a>1 |(分之)</h1><p>表达式1|表达式2|表达式3  - 先用表达式进行匹配，匹配成功就直接成功；<br>                        不成功就使用表达式2去匹配；匹配失败再用表达式3去匹配…以此类推<br>                        (三个表达式中只要有一个能够匹配成功就成功，否则匹配失败)</p>
-<h1 id="2-分组"><a href="#2-分组" class="headerlink" title="2 ()(分组)"></a>2 ()(分组)</h1><p>a.分组 - 将括号中的内容看成一个整体</p>
-<pre><code>(abc){2}  --&gt; abcabc
-abc{2}  --&gt; abcc 
-</code></pre><p>b.分组重复 - 在有分组的正则表达式中，可以在分组后面通过’\数字’来重复前面第几个分组匹配到的内容</p>
-<pre><code>(\d{2})abc\1  --&gt; 78abc78
-</code></pre><pre><code>re_str = r&#39;[a-z]{3}|\d{3}&#39;
-print(re.fullmatch(re_str, &#39;384&#39;))
-
-re_str = r&#39;abc([A-Z]{2}|\d{2})&#39;
-print(re.fullmatch(re_str, &#39;abcKD&#39;))
-
-re_str = r&#39;(abc){2}&#39;
-print(re.fullmatch(re_str, &#39;abcabc&#39;))
-
-re_str = r&#39;(\d{2})a(\d{3})bc\2{2}\1&#39;
-print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
+                <h1 id="一、进制"><a href="#一、进制" class="headerlink" title="一、进制"></a>一、进制</h1><p>在计算机编程中，整数可以通过十进制、二进制、八进制和十六进制来表示</p>
+<h2 id="1-十进制"><a href="#1-十进制" class="headerlink" title="1.十进制"></a>1.十进制</h2><p>a.基数：0，1，2，3，4，5，6，7，8，9<br>b.进位：逢10进1<br>c.位权：123(10) = 3<em>10**0 + 2</em>10<strong>1 + 1*10</strong>2</p>
+<h2 id="2-二进制"><a href="#2-二进制" class="headerlink" title="2.二进制"></a>2.二进制</h2><p>a.基数：0，1<br>0111, 1100, 101010101, 1111100011<br>b.进位：逢2进1<br>100(2) == 4(10)   101(2) == 5(10)<br>c.位权：101(2) = 1<em>2**0 + 0</em>2<strong>1 + 1*2</strong>2 = 5</p>
+<h2 id="3-八进制"><a href="#3-八进制" class="headerlink" title="3.八进制"></a>3.八进制</h2><p>a.基数：0，1，2，3，4，5，6，7<br>76， 26， 11<br>b.进位：逢8进1<br>c.位权：123(8) = 3<em>8**0+2</em>8<strong>1+1*8</strong>2 = 3+16+64 = 83<br>111(8) = 8<strong>0+8</strong>1+8**2 = 1+8+64 = 73  </p>
+<h2 id="4-十六进制"><a href="#4-十六进制" class="headerlink" title="4.十六进制"></a>4.十六进制</h2><p>a.基数：0~9，a/A ~ f/F   – a/A(10), b/B(11), c/C(12), d/D(13), e/E(14), f/F(15)<br>1f, ff, abc, a00bf<br>b.进位：逢16进1<br>c.位权： 123(16) = 3<em>16**0 + 2</em>16<strong>1 + 1*16</strong>2 = 3+32+256=291</p>
+<h3 id="1-程序中怎么表示不同进制的数"><a href="#1-程序中怎么表示不同进制的数" class="headerlink" title="1.程序中怎么表示不同进制的数"></a>1.程序中怎么表示不同进制的数</h3><p> a.十进制<br> 在程序中直接写的数字都是10进制</p>
+<pre><code>num = 110   # 这是一个10进制数
+print(num)  # 直接打印其他进制数就会显示他的十进制
+</code></pre><p> b.二进制<br> <strong>0b/B+二进制数</strong></p>
+<pre><code>num = 0b1110
+print(num)   # 2+4+8
+ num2 = 0b123   # 错误！
+print()
+print(bin(800))   # 获取一个数对应的二进制表示方式
+print(bin(0o671))  # 110111001
+print(bin(0xaf))   # 10101111
+print(bin(100))
+</code></pre><p> c.八进制<br> <strong>0o/O+八进制数</strong></p>
+<pre><code>num = 0o176
+print(num)
+num = 0o78    # 错误！
+print(oct(800))
+print(oct(0b111000101))   # 0o705
+</code></pre><p> d.十六进制<br><strong> 0x/X + 十六进制数</strong></p>
+<pre><code>num = 0xaf2
+print(num)
+num = 0xah   # 错误！
+</code></pre><pre><code>print(hex(19968))
+print(hex(175))
+print(hex(255))
+print(hex(0o456))
+</code></pre><pre><code>num1 = 17
+num2 = 0b10001
+num3 = 0o21
+num4 = 0x11
+print(num1, num2, num3, num4)
+</code></pre><pre><code>print(ord(&#39;一&#39;))
+print(&#39;aaa\u4e00kl&#39;)
+</code></pre><h1 id="二、位运算"><a href="#二、位运算" class="headerlink" title="二、位运算"></a>二、位运算</h1><h2 id="原码、反码、补码"><a href="#原码、反码、补码" class="headerlink" title="原码、反码、补码"></a>原码、反码、补码</h2><p><strong>计算机存储数据只能存储数字数据，而且存的是数字的补码。<br>计算机对数据进行运算的时候是使用补码进行运算的，将数据从计算机中读出来看到的是原码</strong></p>
+<p>##1.原码：符号位+真值<br>说明：<br>符号位: 最高位用0表示正数，1表示负数<br>真值: 去掉正负，数字对应的二进制值</p>
+<p>100的原码：01100100<br>-100的原码：11100100</p>
+<p>##2.反码：<br>正数的反码：就是原码<br>负数的反码：原码的符号位不变,其余的位数取反(0-&gt;1, 1-&gt;0)</p>
+<p>100的反码：01100100<br>-100的反码: 10011011</p>
+<p>##3.补码<br>正数的补码：还是原码<br>负数的补码: 反码加1</p>
+<p>100的补码：01100100<br>-100的反码：10011100  </p>
+<p>练习: -50的原码、反码、补码<br>原码:1110010<br>反码:1001101<br>补码:1001110</p>
+<h2 id="4-为什么计算机要存补码？"><a href="#4-为什么计算机要存补码？" class="headerlink" title="4.为什么计算机要存补码？"></a>4.为什么计算机要存补码？</h2><p><strong>因为计算中只有加法器，没有减法器</strong></p>
+<p>3 - 2 –&gt; 3 + (-2) = 1<br>2 - 3 –&gt; 2 + (-3) = -1</p>
+<p>-3的原码: 1011   反码:1100   补码:1101<br>2的原码: 0010<br>原码算:<br>2-3 = 0010+1011 = 1101(原)  = -5<br>补码算:<br>0010+1101 = 1111(补) = 1110(反) = 1001(原) = -1</p>
+<p>-3 + -2  = -5<br>-3原码: 1011  反：1100  补:1101<br>-2原码: 1010  反: 1101  补: 1110<br>原码算:<br>-3 + -2 = 1011+1010 = 0101(原) = 5<br>补码算:<br>1101+1110 = 1011(补)=1010(反)=1101(原) = -5</p>
+<h1 id="位运算-amp-按位与-按位或运算-按位取反-按位异或-gt-gt-右移-lt-lt-左移"><a href="#位运算-amp-按位与-按位或运算-按位取反-按位异或-gt-gt-右移-lt-lt-左移" class="headerlink" title="位运算: &amp;(按位与), |(按位或运算), ~(按位取反), ^(按位异或), &gt;&gt;(右移), &lt;&lt;(左移)"></a>位运算: &amp;(按位与), |(按位或运算), ~(按位取反), ^(按位异或), &gt;&gt;(右移), &lt;&lt;(左移)</h1><p>###a、 &amp;(按位与)<br>数字1 &amp; 数字2 –&gt; 每一位上的数都为1结果就是1，有0就是0<br>1 &amp; 1 = 1<br>1 &amp; 0 = 0<br>0 &amp; 1 = 0<br>0 &amp; 0 = 0<br>特点: 一个位上的数如果和1与，可以保留这个位上的数； 和0与可以置0<br>（重要）<br><strong>应用：判断一个数的奇偶性(如果一个数的二进制的最低位是1就是奇数，否则是偶数)</strong></p>
+<pre><code>num % 2 == 0  --&gt; num是偶数 (传统)
+num &amp; 1 == 0  --&gt; num是偶数
+num &amp; 1 == 1  --&gt; num是奇数
+print(3 &amp; 2)   # 0011 &amp; 0010 = 0010(补)
+print(-3 &amp; -2)
+</code></pre><p>-3: 1011(原) 1100(反) 1101(补)<br>-2: 原:1010  反: 1101  补: 1110<br>1101 &amp; 1110 = 1100(补)=1011(反)=1100(原)</p>
+<pre><code>print(2 &amp; 1, 200 &amp; 1, -100 &amp; 1)
+print(5 &amp; 1, 111 &amp; 1, -13 &amp; 1)
+</code></pre><p>###b、|(按位或运算)<br>数字1 | 数字2： 只要有1结果就是1，两个都为0结果才是0<br>1 | 1 = 1<br>1 | 0 = 1<br>0 | 1 = 1<br>0 | 0 = 0<br>特点: 和1或，置1</p>
+<pre><code>print(3 | 2)   # 0011 | 0010 = 0011(补)
+print(-3 | -2)  # 1101 | 1110 = 1111(补)=1110(反)=1001(原码)
+</code></pre><p>###c、~(按位取反)<br>~数字 : 将数字上的每一位取反<br>~1 = 0<br>~0 = 1</p>
+<pre><code>print(~3)   # ~0011 = 1100(补)=1011(反)=1100
+print(~-4)   #  ~~3 = 3
+</code></pre><p>###d、^(按位异或)（重要）<br>数字1 ^ 数字2 : 相同为0，不同为1<br>1 ^ 1 = 0<br>1 ^ 0 = 1<br>0 ^ 1 = 1<br>0 ^ 0 = 0<br>应用: 加密<br>判断2个数是否相等，相等等于0，不相等等于1</p>
+<pre><code>print(3 ^ 10997)   # 3 ^ 2 = 1
+print(10998 ^ 10997)   # 1 ^ 2 = 3
+</code></pre><p>###e、 &gt;&gt;(右移), &lt;&lt;(左移)（重要）<br>数字1 &lt;&lt; N：数字1左移N位, 数字1 * 2<strong>N<br>数字1 &gt;&gt; N: 数字1右移N位，数字1 // 2</strong>N<br>应用：快速乘2的次方/除2的次方</p>
+<pre><code>print(4 &lt;&lt; 1)
+print(-3 &lt;&lt; 2)
+print(5 &gt;&gt; 2)
 </code></pre>
             </div>
             <hr>
@@ -689,7 +636,7 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
 
 <div id="article-share">
     
-    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
     
 </div>
 
@@ -698,45 +645,42 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
             <div class="reprint">
                 <p>
                     <span class="reprint-tip">
-                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;Reprint please specify:
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
                     </span>
                     <a href="https://github.com/LeeJune1992" class="b-link-green">leejune</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/21/正则表达式/" class="b-link-green">正则表达式（python3）</a>
+                    <a href="/2019/02/23/wei-yun-suan/" class="b-link-green">进制与位运算</a>
                 </p>
             </div>
         </div>
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
 
-    
-
-    
-        <div class="disqus-card card" data-aos="fade-up">
-    <div id="disqus_thread" class="card-content">
-        <noscript>Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-    </div>
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script type="text/javascript">
-    disqus_config = function () {
-        this.page.url = 'https://github.com/LeeJune1992/2019/02/21/正则表达式/';
-        this.page.identifier = '/2019/02/21/正则表达式/';
-        this.page.title = '正则表达式（python3）';
-    };
-    let disqus_shortname = '';
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2019-02-23T10-16-44',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
 
-    (function () { // DON'T EDIT BELOW THIS LINE
-        let d = document, s = d.createElement('script');
-        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
-        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+    gitalk.render('gitalk-container');
 </script>
+    
+
+    
+
     
 
     
@@ -750,32 +694,43 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/02/21/Nginx服务器安装/">
+                <a href="/2019/02/23/gao-ji-bian-liang-lei-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Nginx服务器">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="python3中的高级变量">
                         
-                        <span class="card-title">Nginx服务器</span>
+                        <span class="card-title">python3中的高级变量</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
+                    <div class="summary">高级变量类型目标
+列表
+元组
+字典
+字符串
+公共方法
+变量高级
 
-2. 安装nginxa) 添加nginx存储库  
-    yum in</div>
+知识点回顾
+Python 中数据类型可以分为 数字型 和 非数字型
+数字型
+整型 (int)
+浮点型（float）
+布尔型（bool） 
+真 True 非 0 数 —— 非零</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-23
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/服务器/" class="post-category" target="_blank">
-                                    服务器
+                            <a href="/categories/变量/" class="post-category" target="_blank">
+                                    变量
                                 </a>
                             
                             
@@ -785,8 +740,8 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/服务器/" target="_blank">
-                        <span class="chip bg-color">服务器</span>
+                    <a href="/tags/python3中的高级变量/" target="_blank">
+                        <span class="chip bg-color">python3中的高级变量</span>
                     </a>
                     
                 </div>
@@ -797,33 +752,30 @@ print(re.fullmatch(re_str, &#39;34a890bc89089034&#39;))
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fa fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/20/Linux指令/">
+                <a href="/2019/02/22/vim-bian-ji-qi-zhi-shen/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="linux指令">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="vim编辑器之神">
                         
-                        <span class="card-title">linux指令</span>
+                        <span class="card-title">vim编辑器之神</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">连接云服务器：1.连接服务器:    ssh  root@ip地址2.退出:  logout
-Linux指令系统：
-命令名称 [命名参数] [命令对象]
-一、日常操作1.cd指令       - 进入指定文件夹cd  目录     - 进入</div>
+                    <div class="summary">vim编辑器之神配置vimrc配置在shell中可以通过 vim ~/.vimrc 或者 vim /etc/vimrc 打开vimrc文件对vim进行配置。在这个文件中可以进行很多和vim相关的配置，常用的如下（如果对其他配置感兴趣的可以自</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/linux/" class="post-category" target="_blank">
-                                    linux
+                            <a href="/categories/vim/" class="post-category" target="_blank">
+                                    vim
                                 </a>
                             
                             
@@ -833,8 +785,8 @@ Linux指令系统：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/linux/" target="_blank">
-                        <span class="chip bg-color">linux</span>
+                    <a href="/tags/vim/" target="_blank">
+                        <span class="chip bg-color">vim</span>
                     </a>
                     
                 </div>
@@ -874,9 +826,9 @@ Linux指令系统：
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + 'From: leejune<br />'
-            + 'Author: leejune<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '来源: leejune<br />'
+            + '作者: leejune<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
         selection.selectAllChildren(newdiv);
@@ -887,7 +839,7 @@ Linux指令系统：
     </div>
     <div class="col l3 hide-on-med-and-down">
         <div class="toc-widget">
-            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -945,7 +897,7 @@ Linux指令系统：
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">5.8k</span>
+                <span class="white-color">11.5k</span>
             
 
             
@@ -994,8 +946,8 @@ Linux指令系统：
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input" autofocus>
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus>
         </div>
         <div id="searchResult"></div>
     </div>
