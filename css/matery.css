@@ -163,7 +163,13 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    /*background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);*/
+    /*background:linear-gradient(-110deg,#a0a 30%,rgba(0,0,0,0) 30%),url('https://www.nasa.gov/sites/default/files/thumbnails/image/pia21421-cr.jpg');
+    background-size:cover;
+    background-position:top left;*/
+    /*background:linear-greadient(70deg,#0f0 0%, 00f 100%);*/
+    /*background: -webkit-linear-gradient(110deg, #000 33%, rgba(0,0,0,0) 33%), -webkit-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);*/
+    background: linear-gradient(110deg, #260af8 40%, rgba(0, 0, 0, 0.1) 40%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 60%, #c03fff 60%);
 }
 
 .text-color {
@@ -172,6 +178,7 @@ mark {
 
 .white-color {
     color: #fff;
+    /*color: ＃EFEFDA;*/
 }
 
 /*头部导航栏样式*/

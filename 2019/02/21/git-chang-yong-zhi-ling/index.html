@@ -4,14 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL配置, leejune">
-    <meta name="description" content="MySQL配置
-
-
-下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
-
-
-安装MySQL源: yum localins">
+    <meta name="keywords" content="git常用指令, leejune">
+    <meta name="description" content="git常用指令
+1.基本指令
+git init       ——  新建git仓库
+git add 文件/文件夹       ——  将文件添加到缓存区中
+git add -A       --- 添加所有内容到缓存区中
+git stuta">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MySQL配置 | leejune</title>
+    <title>git常用指令 | leejune</title>
     <link rel="icon" type="image/png" href="http://pnbdq6q26.bkt.clouddn.com/favicon.JPG">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -289,13 +288,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        MySQL配置
+                        git常用指令
                     </div>
                 </div>
             </div>
@@ -387,8 +386,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/mysql/" target="_blank">
-                                <span class="chip bg-color">mysql</span>
+                            <a href="/tags/gitbash/" target="_blank">
+                                <span class="chip bg-color">gitbash</span>
                             </a>
                         
                     </div>
@@ -399,8 +398,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/MySQL/" class="post-category" target="_blank">
-                                MySQL
+                            <a href="/categories/git/" class="post-category" target="_blank">
+                                git
                             </a>
                         
                     </div>
@@ -418,7 +417,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        248
+                        521
                     </div>
                     
 
@@ -441,41 +440,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>MySQL配置</p>
-<ol>
-<li>
-<p>下载MySQL源安装包: <code>wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</code></p>
-</li>
-<li>
-<p>安装MySQL源: <code>yum localinstall mysql57-community-release-el7-8.noarch.rpm</code></p>
-</li>
-<li>
-<p>安装MySQL:  <code>yum install mysql-community-server</code></p>
-</li>
-<li>
-<p>设置开启启动MySQL服务: <code>systemctl enable mysqld</code></p>
-</li>
-<li>
-<p>启动/重启MySQL服务：systemctl restart mysqld</p>
-</li>
-<li>
-<p>查看MySQL初始密码：grep 'A temporary password' /var/log/mysqld.log</p>
-</li>
-<li>
-<p>更改MySQL密码：mysqladmin -u root -p'旧密码' password '新密码'<br>
-这里更改密码出了问题，更改失败，这是因为密码太过简单的原因。有两个接解决方法：</p>
-</li>
-</ol>
-<p>方法一：把密码设置复杂点（这是最直接的方法）</p>
-<p>方法二：关闭mysql密码强度验证(validate_password)</p>
-<p>编辑配置文件：<code>vim /etc/my.cnf</code>， 增加这么一行validate_password=off</p>
-<p>编辑后重启mysql服务：<code>systemctl restart mysqld</code></p>
-<ol start="8">
-<li>设置mysql能够远程访问:<br>
-a. 登录进MySQL:  <code>mysql -uroot -p密码</code><br>
-b. 增加一个用户给予访问权限: <code>grant all privileges on *.* to 'root'@'ip地址' identified by '密码' with grant option;</code><br>
-c. 刷新权限：<code>flush privileges;­</code></li>
-</ol>
+                <h1>git常用指令</h1>
+<h2>1.基本指令</h2>
+<p><code>git init</code>       ——  新建git仓库<br>
+<code>git add 文件/文件夹</code>       ——  将文件添加到缓存区中<br>
+<code>git add -A</code>       --- 添加所有内容到缓存区中
+<code>git stutas</code>      ———    查看git状态<br>
+<code>git commit -m ‘提交信息’</code>       ——  将缓存区中的内容全部提交到git本地仓库中</p>
+<p><code>git log</code>        ——-    查看提交日志</p>
+<p><code>git reset - - hard HEAD</code>       ——   让工作目录中的内容和仓库中的内容保持一致<br>
+<code>git reset --hard HEAD^</code>        ——  回到上一个版本<br>
+<code>git reset - - hard 版本号</code>       ——  回到指定的版本<br>
+<code>git checkout - - 文件名</code>        ——  从暂存区中恢复工作目录中的内容(让工作区中的指定文件，回到上次提交的时候的状态)</p>
+<p><code>git clone &lt;url&gt;</code> - 将服务器上的项目(仓库)克隆 (使用https地址需要输入密码，使用ssh地址需要添加公钥)</p>
+<p><code>git remote add origin 地址</code>  	     ----- 关联远程仓库(只需要关联一次)</p>
+<p><code>git push [-u] origin master</code>       ----- 提交(-u在第一次提交分之的时候才用)</p>
+<h2>2.分之管理</h2>
+<p>创建仓库会默认给我们创建一个master分之,这个分之一般作为提交和发布分之;开发一般会自己创建一个develop分之，用来开发和测试;多人协作的时候还可能根据不同的人或者(不同的功能)创建不同的分之，用来独立开发</p>
+<p>常见分之： master(主要是合并develop), develop(主要合并下面的其他分支), 功能/人员分之(开发)</p>
+<p><code>git branch [-a]</code>        		- 查看分之<br>
+<code>git branch 分之名</code>		     - 创建分之<br>
+<code>git checkout 分支名</code>		     -   切换分之<br>
+<code>git checkout -b 分之名</code>		     	- 切换并创建新的分之<br>
+<code>git diff	分之1 分之2</code>		     - 查看两个分之之间的差异<br>
+<code>git merge 分之名</code>			     - 让当前分之和指定分之进行合并</p>
+<p>注意: 切换分之、push、pull，这些操作前要保证工作区是clean</p>
+<p>怎么避免冲突：  不要发生多个分之对同一个文件在同一个版本下进行修改(和同伴确认和商量)</p>
 
             </div>
             <hr>
@@ -616,7 +606,7 @@ c. 刷新权限：<code>flush privileges;­</code></li>
                     </span>
                     <a href="https://github.com/LeeJune1992" class="b-link-green">leejune</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/21/mysql-pei-zhi/" class="b-link-green">MySQL配置</a>
+                    <a href="/2019/02/21/git-chang-yong-zhi-ling/" class="b-link-green">git常用指令</a>
                 </p>
             </div>
         </div>
@@ -900,22 +890,23 @@ c. 刷新权限：<code>flush privileges;­</code></li>
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/02/21/git-chang-yong-zhi-ling/">
+                <a href="/2019/02/21/hexo-bo-ke-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="git常用指令">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Hexo博客搭建">
                         
-                        <span class="card-title">git常用指令</span>
+                        <span class="card-title">Hexo博客搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">git常用指令
-1.基本指令
-git init       ——  新建git仓库
-git add 文件/文件夹       ——  将文件添加到缓存区中
-git add -A       --- 添加所有内容到缓存区中
-git stuta</div>
+                    <div class="summary">Hexo博客搭建
+1. 搭建博客
+使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js
+
+首先在自己的电脑上创建一个空的文件夹'Hexo'
+在gitbash中终端中通过cd指令进入到刚才创建的文件夹中
+输入指令 npm </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -924,8 +915,8 @@ git stuta</div>
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/git/" class="post-category" target="_blank">
-                                    git
+                            <a href="/categories/hexo/" class="post-category" target="_blank">
+                                    hexo
                                 </a>
                             
                             
@@ -935,8 +926,8 @@ git stuta</div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/gitbash/" target="_blank">
-                        <span class="chip bg-color">gitbash</span>
+                    <a href="/tags/hexo/" target="_blank">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
@@ -950,26 +941,23 @@ git stuta</div>
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/21/nginx-fu-wu-qi-an-zhuang/">
+                <a href="/2019/02/21/mysql-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Nginx服务器">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="MySQL配置">
                         
-                        <span class="card-title">Nginx服务器</span>
+                        <span class="card-title">MySQL配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Nginx服务器
-1.阿里云添加80端口
-阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
+                    <div class="summary">MySQL配置
 
 
+下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 
 
-2. 安装nginx
-a) 添加nginx存储库
-	yum i</div>
+安装MySQL源: yum localins</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -978,8 +966,8 @@ a) 添加nginx存储库
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/服务器/" class="post-category" target="_blank">
-                                    服务器
+                            <a href="/categories/MySQL/" class="post-category" target="_blank">
+                                    MySQL
                                 </a>
                             
                             
@@ -989,8 +977,8 @@ a) 添加nginx存储库
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/服务器/" target="_blank">
-                        <span class="chip bg-color">服务器</span>
+                    <a href="/tags/mysql/" target="_blank">
+                        <span class="chip bg-color">mysql</span>
                     </a>
                     
                 </div>

@@ -5,10 +5,16 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Nginx服务器, leejune">
-    <meta name="description" content="Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
+    <meta name="description" content="Nginx服务器
+1.阿里云添加80端口
+阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
 
-2. 安装nginxa) 添加nginx存储库  
-    yum in">
+
+
+
+2. 安装nginx
+a) 添加nginx存储库
+	yum i">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -62,7 +68,7 @@
             
             <i class="fa fa-home"></i>
             
-            <span>Home</span>
+            <span>首页</span>
         </a>
     </li>
     
@@ -142,7 +148,7 @@
                 
                 <i class="fa fa-fw fa-home"></i>
                 
-                Home
+                首页
             </a>
         </li>
         
@@ -415,14 +421,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        481
+                        488
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -438,47 +444,64 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
-<p><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun0.png" alt="打开安全组设置"><br><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun2.png" alt><br><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun3.png" alt><br><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun4.png" alt></p>
-<h3 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2. 安装nginx"></a>2. 安装nginx</h3><p>a) 添加nginx存储库  </p>
-<pre class=" language-python"><code class="language-python">    yum install epel<span class="token operator">-</span>release
+                <h1>Nginx服务器</h1>
+<h3>1.阿里云添加80端口</h3>
+<p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
+<p><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun0.png" alt="打开安全组设置"><br>
+<img src="http://pnbdq6q26.bkt.clouddn.com/aliyun2.png" alt>
+<img src="http://pnbdq6q26.bkt.clouddn.com/aliyun3.png" alt>
+<img src="http://pnbdq6q26.bkt.clouddn.com/aliyun4.png" alt></p>
+<h3>2. 安装nginx</h3>
+<p>a) 添加nginx存储库</p>
+<pre class=" language-language-python"><code class="language-language-python">	yum install epel-release
 </code></pre>
 <p>b) 安装nginx</p>
-<pre class=" language-python"><code class="language-python">    yum install nginx
+<pre class=" language-language-python"><code class="language-language-python">	yum install nginx
 </code></pre>
-<p>c) 运行nginx<br>Nginx不会自行启动。要运行Nginx  </p>
-<pre><code>    systemctl start nginx
-</code></pre><p>nginx的运行命令:  </p>
-<pre><code>    systemctl status nginx 查看nginx的状态  
-    systemctl start/stop/enable/disable nginx 启动/关闭/设置开机启动/禁止开机启动  
-</code></pre><p>d) 系统启动时启动Nginx  </p>
-<pre><code>    systemctl enable nginx
-</code></pre><p>e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信：   </p>
-<pre><code>    sudo firewall-cmd --permanent --zone=public --add-service=http 
+<p>c) 运行nginx<br>
+Nginx不会自行启动。要运行Nginx</p>
+<pre><code>	systemctl start nginx
+</code></pre>
+<p>nginx的运行命令:</p>
+<pre><code>	systemctl status nginx 查看nginx的状态  
+	systemctl start/stop/enable/disable nginx 启动/关闭/设置开机启动/禁止开机启动  
+</code></pre>
+<p>d) 系统启动时启动Nginx</p>
+<pre><code>	systemctl enable nginx
+</code></pre>
+<p>e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信：</p>
+<pre><code>	sudo firewall-cmd --permanent --zone=public --add-service=http 
 
-    sudo firewall-cmd --permanent --zone=public --add-service=https
+	sudo firewall-cmd --permanent --zone=public --add-service=https
 
-    sudo firewall-cmd --reload
-</code></pre><h3 id="3-nginx目录共享配置"><a href="#3-nginx目录共享配置" class="headerlink" title="3.nginx目录共享配置"></a>3.nginx目录共享配置</h3><p>a) 在contOS目录中确定一个需要共享的文件夹，例如： /home/yuting<br>b) 打开 etc/nginx/nginx.conf 文件，设置server</p>
-<pre><code>    #共享设置 - 在浏览器中输入服务器ip地址，会展示共享目录的文件列表
-    root /home/yuting;
-    location / {
-           autoindex on;
-           autoindex_exact_size on;
-           autoindex_localtime on;
-    }  
-</code></pre><p>除了可以共享文件，还可以自定义页面</p>
-<pre><code>    #自定义服务器页面
-    location / {
-            root /home/yuting;
-            index index.html index.htm;
-    }
-</code></pre><p>注意： 如果出现权限问题，可以修改目录的权限  </p>
-<h1 id="ssh密钥认证"><a href="#ssh密钥认证" class="headerlink" title="ssh密钥认证"></a>ssh密钥认证</h1><p>1.在主机和从机上执行：<code>ssh-keygen</code></p>
-<p>2.在从机上执行:  <code>scp  id_rsa.pub  root@主机地址:~/.ssh/master.pub</code><br>(上面这条指令是将从机上的 id_rsa.pub文件拷贝传递给到主机的.ssh文件夹下，并且命名为’master.pub’)</p>
-<p>3.在主机中的.ssh文件夹中创建authorized_keys文件： <code>touch authorized_keys</code> </p>
-<p>4.修改文件authorized_keys的权限: <code>chmod 600  authorized_keys</code>  </p>
-<p>5.将master.pub放进authorized_keys文件中:  <code>cat master.pub &gt;&gt;  authorized_keys</code></p>
+	sudo firewall-cmd --reload
+</code></pre>
+<h3>3.nginx目录共享配置</h3>
+<p>a) 在contOS目录中确定一个需要共享的文件夹，例如： /home/yuting<br>
+b) 打开 etc/nginx/nginx.conf 文件，设置server</p>
+<pre><code>	#共享设置 - 在浏览器中输入服务器ip地址，会展示共享目录的文件列表
+	root /home/yuting;
+	location / {
+	       autoindex on;
+	       autoindex_exact_size on;
+	       autoindex_localtime on;
+	}  
+</code></pre>
+<p>除了可以共享文件，还可以自定义页面</p>
+<pre><code>	#自定义服务器页面
+	location / {
+			root /home/yuting;
+			index index.html index.htm;
+	}
+</code></pre>
+<p>注意： 如果出现权限问题，可以修改目录的权限</p>
+<h1>ssh密钥认证</h1>
+<p>1.在主机和从机上执行：<code>ssh-keygen</code></p>
+<p>2.在从机上执行:  <code>scp id_rsa.pub root@主机地址:~/.ssh/master.pub</code>
+(上面这条指令是将从机上的 id_rsa.pub文件拷贝传递给到主机的.ssh文件夹下，并且命名为’master.pub’)</p>
+<p>3.在主机中的.ssh文件夹中创建authorized_keys文件： <code>touch authorized_keys</code></p>
+<p>4.修改文件authorized_keys的权限: <code>chmod 600 authorized_keys</code></p>
+<p>5.将master.pub放进authorized_keys文件中:  <code>cat master.pub &gt;&gt; authorized_keys</code></p>
 <p>6.在操作主机的时候，需要主机能够自己免密访问自己就将自己的公钥放在自己的authorized_keys文件中</p>
 
             </div>
@@ -914,11 +937,13 @@
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">MySQL配置  
+                    <div class="summary">MySQL配置
 
-下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm  
 
-安装MySQL源: yum locali</div>
+下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
+
+
+安装MySQL源: yum localins</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -963,8 +988,11 @@
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1.什么是正则表达式(语法通用)正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符
-2.python对正则表达式的支持通过re模块提供相应支持正则表达式的方法a.fullmatch(正则表达式, 字符串)  –&gt; 用正则</div>
+                    <div class="summary">1.什么是正则表达式(语法通用)
+正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符
+2.python对正则表达式的支持
+通过re模块提供相应支持正则表达式的方法
+a.fullmatch(正则表达式, 字符串)  --&gt;</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -1096,7 +1124,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">13.3k</span>
+                <span class="white-color">13.7k</span>
             
 
             
