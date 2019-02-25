@@ -4,11 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Nginx服务器, leejune">
-    <meta name="description" content="Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
-
-2. 安装nginxa) 添加nginx存储库  
-    yum in">
+    <meta name="keywords" content="mysql基本语法整理, leejune">
+    <meta name="description" content="SQL语法DDL(数据定义语言)DML(数据操作语言）DCL(数据控制语言)注意: SQL中大小写不敏感（大写和小写是一样的）; 每条SQL语句必须以分号结束
+一.DDL - 主要提供数据库和表的创建、删除和修改0. 删除数据库: drop">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Nginx服务器 | leejune</title>
+    <title>mysql基本语法整理 | leejune</title>
     <link rel="icon" type="image/png" href="http://pnbdq6q26.bkt.clouddn.com/favicon.JPG">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -286,13 +284,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Nginx服务器
+                        mysql基本语法整理
                     </div>
                 </div>
             </div>
@@ -384,8 +382,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/服务器/" target="_blank">
-                                <span class="chip bg-color">服务器</span>
+                            <a href="/tags/mysql/" target="_blank">
+                                <span class="chip bg-color">mysql</span>
                             </a>
                         
                     </div>
@@ -396,8 +394,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/服务器/" class="post-category" target="_blank">
-                                服务器
+                            <a href="/categories/mysql/" class="post-category" target="_blank">
+                                mysql
                             </a>
                         
                     </div>
@@ -408,21 +406,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-02-21
+                    2019-02-25
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        481
+                        2.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        8 分
                     </div>
                     
                 
@@ -438,49 +436,117 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
-<p><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun0.png" alt="打开安全组设置"><br><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun2.png" alt><br><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun3.png" alt><br><img src="http://pnbdq6q26.bkt.clouddn.com/aliyun4.png" alt></p>
-<h3 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2. 安装nginx"></a>2. 安装nginx</h3><p>a) 添加nginx存储库  </p>
-<pre class=" language-python"><code class="language-python">    yum install epel<span class="token operator">-</span>release
+                <p><strong>SQL语法</strong><br><br><strong>DDL(数据定义语言)</strong><br><br><strong>DML(数据操作语言）</strong><br><br><strong>DCL(数据控制语言)</strong><br><br><strong>注意: SQL中大小写不敏感（大写和小写是一样的）; 每条SQL语句必须以分号结束</strong></p>
+<h1 id="一-DDL-主要提供数据库和表的创建、删除和修改"><a href="#一-DDL-主要提供数据库和表的创建、删除和修改" class="headerlink" title="一.DDL - 主要提供数据库和表的创建、删除和修改"></a>一.DDL - 主要提供数据库和表的创建、删除和修改</h1><h2 id="0-删除数据库-drop-database-数据库名"><a href="#0-删除数据库-drop-database-数据库名" class="headerlink" title="0. 删除数据库: drop database 数据库名;"></a>0. 删除数据库: drop database 数据库名;</h2><pre><code>DROP DATABASE school;   -- 直接删除指定数据库
+DROP DATABASE if EXISTS school;   -- 如果指定的数据库存在就删除数据库
+</code></pre><h2 id="1-创建数据库-create-database-数据库名"><a href="#1-创建数据库-create-database-数据库名" class="headerlink" title="1.创建数据库: create database 数据库名;"></a>1.创建数据库: create database 数据库名;</h2><pre><code>create database school;  
+-- 直接创建指定数据库
+CREATE database if not EXISTS school;  
+-- 当指定数据库不存在的时候才创建数据库
+create database if not EXISTS school default charset utf8;
+   -- 创建数据库的时候设置字符集编码方式为utf8,让数据库支持中文数据的存储
+</code></pre><h2 id="2-使用-切换数据库-use-数据库名"><a href="#2-使用-切换数据库-use-数据库名" class="headerlink" title="2.使用/切换数据库: use 数据库名;"></a>2.使用/切换数据库: use 数据库名;</h2><pre><code>use school;
+</code></pre><h2 id="3-新建表-create-table-if-not-exists-表名-字段名1-类型1-字段2-类型2-…"><a href="#3-新建表-create-table-if-not-exists-表名-字段名1-类型1-字段2-类型2-…" class="headerlink" title="3.新建表: create table if not exists 表名(字段名1 类型1, 字段2 类型2,…);"></a>3.新建表: create table if not exists 表名(字段名1 类型1, 字段2 类型2,…);</h2><p><strong>注意：</strong><br> </p>
+<h3 id="a-表名一般需要加前缀’t’或者’tb’"><a href="#a-表名一般需要加前缀’t’或者’tb’" class="headerlink" title="a. 表名一般需要加前缀’t’或者’tb’ "></a>a. 表名一般需要加前缀’t’或者’tb’ <br></h3><h3 id="b-字段用来确定表中要存储哪些数据，字段名随便命名但是不能是关键字"><a href="#b-字段用来确定表中要存储哪些数据，字段名随便命名但是不能是关键字" class="headerlink" title="b.字段用来确定表中要存储哪些数据，字段名随便命名但是不能是关键字"></a>b.字段用来确定表中要存储哪些数据，字段名随便命名但是不能是关键字<br></h3><h3 id="c-数据类型必须是MySQL支持的数据类型"><a href="#c-数据类型必须是MySQL支持的数据类型" class="headerlink" title="c.数据类型必须是MySQL支持的数据类型"></a>c.数据类型必须是MySQL支持的数据类型<br></h3><h3 id="d-常用数据类型"><a href="#d-常用数据类型" class="headerlink" title="d.常用数据类型:"></a>d.常用数据类型:</h3><pre><code>int-整数, char(size)-定长字符串, varchar(size)-不定长字符串, text-字符串, bit-布尔, date-日期
+CREATE TABLE if not EXISTS t_student(stuid int, stuname varchar(20), gender bit, birth date);  
+</code></pre><h3 id="e-新建表并且添加约束-create-table-if-not-exists-表名-字段名1-类型1-约束1-字段2-类型2-约束2-…"><a href="#e-新建表并且添加约束-create-table-if-not-exists-表名-字段名1-类型1-约束1-字段2-类型2-约束2-…" class="headerlink" title="e.新建表并且添加约束: create table if not exists 表名(字段名1 类型1 约束1, 字段2 类型2 约束2,…);"></a>e.新建表并且添加约束: create table if not exists 表名(字段名1 类型1 约束1, 字段2 类型2 约束2,…);</h3><h3 id="f-常见约束-not-null-不为空-default-设置默认值-unique-值唯一-primary-key-主键约束"><a href="#f-常见约束-not-null-不为空-default-设置默认值-unique-值唯一-primary-key-主键约束" class="headerlink" title="f.常见约束: not null - 不为空,  default  - 设置默认值,  unique - 值唯一,  primary key - 主键约束"></a>f.常见约束: not null - 不为空,  default  - 设置默认值,  unique - 值唯一,  primary key - 主键约束</h3><h3 id="g-主键约束-主键的值可以确定列表中唯一一条记录-通过一个主键值可以找到表中的唯一一条记录"><a href="#g-主键约束-主键的值可以确定列表中唯一一条记录-通过一个主键值可以找到表中的唯一一条记录" class="headerlink" title="g.主键约束:主键的值可以确定列表中唯一一条记录(通过一个主键值可以找到表中的唯一一条记录)"></a>g.主键约束:主键的值可以确定列表中唯一一条记录(通过一个主键值可以找到表中的唯一一条记录)</h3><p><strong>注意: auto_increment只针对主键有效,并且主键的类型是整型;</strong><br></p>
+<pre><code>CREATE TABLE if not EXISTS t_student(
+stuid int not null auto_increment, 
+stuname varchar(20) not null, 
+gender bit DEFAULT 1, 
+birth date,
+PRIMARY KEY(stuid)  -- 将字段stuid作为当前表的主键（设置主键可以间接约束这个字段的值是唯一的）
+);
+</code></pre><h2 id="4-删除表-DROP-TABLE-if-EXISTS-表名"><a href="#4-删除表-DROP-TABLE-if-EXISTS-表名" class="headerlink" title="4.删除表: DROP TABLE if EXISTS 表名;"></a>4.删除表: DROP TABLE if EXISTS 表名;</h2><pre><code>DROP TABLE if EXISTS t_student;  
+-- 清空表中的数据: TRUNCATE TABLE 表名;
+TRUNCATE TABLE t_student;
+</code></pre><h2 id="5-修改表"><a href="#5-修改表" class="headerlink" title="5.修改表"></a>5.修改表</h2><h3 id="5-1-添加列-alter-TABLE-表名-add-COLUMN-字段名-字段类型-约束"><a href="#5-1-添加列-alter-TABLE-表名-add-COLUMN-字段名-字段类型-约束" class="headerlink" title="5.1 添加列: alter TABLE 表名 add COLUMN 字段名 字段类型 约束;"></a>5.1 添加列: alter TABLE 表名 add COLUMN 字段名 字段类型 约束;</h3><pre><code>alter TABLE t_student add COLUMN score FLOAT(8,2) DEFAULT 0;
+</code></pre><h3 id="5-2-删除列-alter-TABLE-表名-drop-COLUMN-字段名"><a href="#5-2-删除列-alter-TABLE-表名-drop-COLUMN-字段名" class="headerlink" title="5.2 删除列: alter TABLE 表名 drop COLUMN 字段名;"></a>5.2 删除列: alter TABLE 表名 drop COLUMN 字段名;</h3><pre><code>alter TABLE t_student drop COLUMN gender;
+</code></pre><h3 id="5-3-修改表名，修改表中字段名"><a href="#5-3-修改表名，修改表中字段名" class="headerlink" title="5.3 修改表名，修改表中字段名"></a>5.3 修改表名，修改表中字段名</h3><pre><code>ALTER TABLE oldname RENAME to newname;
+ALTER TABLE 表名 CHANGE oldname newname 字段约束信息;
+</code></pre><h1 id="二、DML-数据操作语言-主要针对数据库中数据的增、删、改、查"><a href="#二、DML-数据操作语言-主要针对数据库中数据的增、删、改、查" class="headerlink" title="二、DML(数据操作语言) - 主要针对数据库中数据的增、删、改、查"></a>二、DML(数据操作语言) - 主要针对数据库中数据的增、删、改、查</h1><h2 id="1-增-添加数据-记录"><a href="#1-增-添加数据-记录" class="headerlink" title="1.增(添加数据/记录)"></a>1.增(添加数据/记录)</h2><h3 id="1-1插入数据-记录-insert-into-表名-values-值1-值2-值3-…-依次给指定表中的字段赋值"><a href="#1-1插入数据-记录-insert-into-表名-values-值1-值2-值3-…-依次给指定表中的字段赋值" class="headerlink" title="1.1插入数据/记录: insert into 表名 values(值1, 值2, 值3,….)  - 依次给指定表中的字段赋值"></a>1.1插入数据/记录: insert into 表名 values(值1, 值2, 值3,….)  - 依次给指定表中的字段赋值</h3><pre><code>INSERT into t_student VALUES(100, &#39;张三&#39;, 0, &#39;2019-9-23&#39;);
+</code></pre><h3 id="1-2插入数据-记录-insert-into-表名-字段名1-字段名2-…-values-值1-值2-…-以指定的顺序给指定的字段赋值"><a href="#1-2插入数据-记录-insert-into-表名-字段名1-字段名2-…-values-值1-值2-…-以指定的顺序给指定的字段赋值" class="headerlink" title="1.2插入数据/记录: insert into 表名(字段名1,字段名2,…) values(值1, 值2,…) -以指定的顺序给指定的字段赋值"></a>1.2插入数据/记录: insert into 表名(字段名1,字段名2,…) values(值1, 值2,…) -以指定的顺序给指定的字段赋值</h3><pre><code>INSERT into t_student(stuname, birth) VALUES(&quot;小花&quot;, date(now()));   -- 一次插入一条记录
+
+-- 一次插入多条记录
+INSERT into t_student(stuname, birth) VALUES
+(&quot;小花&quot;, date(now())),
+(&#39;小明&#39;, &#39;2018-9-8&#39;),
+(&#39;路飞&#39;, &#39;1999-12-16&#39;),
+(&#39;佐助&#39;, &#39;2000-10-12&#39;);
+</code></pre><p><strong>值的问题: sql中是数字对应的值直接写，字符串需要使用引号引起来，bit类型的值只有0或者1, 时间可以用内容是满足时间格式字符串也可以是通过时间函数获取的值</strong><br>    – 时间函数: now() - 当前时间  date(now()) - 当前日期   year(now()) - 当前年   month(now()) - 当前月 ….  </p>
+<h2 id="2-删（删除数据-记录）"><a href="#2-删（删除数据-记录）" class="headerlink" title="2.删（删除数据/记录）"></a>2.删（删除数据/记录）</h2><pre><code>-- delete from 表名;    - 删除指定表中所有记录
+DELETE FROM t_student;
+
+-- delete from 表名 where 条件语句;    - 删除满足条件的记录  
+-- SQL中的条件语句: =(判断是否相等), &lt;&gt;(不等于,和python中的!=功能一样), &gt;, &lt;, &gt;=, &lt;=
+DELETE FROM t_student WHERE stuid=100;     
+-- 删除t_student表中stuid的值等于100的记录  
+DELETE FROM t_student WHERE stuname=&#39;小花&#39;;  
+-- 删除t_student表中stuname的值等于&#39;小花&#39;的记录
+DELETE FROM t_student WHERE stuid&lt;108;   
+-- 删除t_student表中stuid的值小于&#39;小花&#39;的记录  
+</code></pre><h2 id="3-改-修改数据-记录"><a href="#3-改-修改数据-记录" class="headerlink" title="3.改(修改数据/记录)"></a>3.改(修改数据/记录)</h2><pre><code>-- update 表名 set 字段1=新值1, 字段2=新值2,...;      
+- 将指定表中所有行的指定列/字段的值赋值为新值
+UPDATE t_student set birth=&#39;1999-10-1&#39;, gender=1;
+
+-- update 表名 set 字段1=新值1, 字段2=新值2,... where 条件语句;  
+-将表中满足条件的行中指定字段的值赋值为新值  
+UPDATE t_student set gender=0 WHERE stuname=&#39;小花&#39;;
+
+-- 通配符%: 表示任意个数的任意字符（包括0个）
+UPDATE t_student set birth=&#39;2000-01-01&#39; WHERE stuname LIKE &#39;小%&#39;;    
+-- 修改stuname是以&#39;小&#39;开头的行对应的birth的值
+UPDATE t_student set birth=&#39;2111-01-01&#39; WHERE stuname LIKE &#39;%小%&#39;;  
+-- 统配符_: 表示一个任意字符
+UPDATE t_student set birth=&#39;2444-01-01&#39; WHERE stuname LIKE &#39;小_&#39;;    
+--  修改stuname只有两个字符，并且第一个字符是‘小’对应的行的birth的值
+</code></pre><p><strong> 注意: 通配符只针对字符串有效!</strong>  </p>
+<h2 id="4-查-获取数据"><a href="#4-查-获取数据" class="headerlink" title="4.查(获取数据)"></a>4.查(获取数据)</h2><h3 id="4-1直接查询"><a href="#4-1直接查询" class="headerlink" title="4.1直接查询"></a>4.1直接查询</h3><pre><code>-- select * from 表名;    
+- 获取指定表中所有行和所有的列(所有数据)
+SELECT * FROM t_student;
+
+-- select 字段名1,字段名2,... from 表名;   
+- 获取指定表中所有行指定的列 
+SELECT stuname,stuid FROM t_student;   
+
+-- select * from 表名 where 条件;    
+- 获取指定表中所有满足条件的行所有列的数据  
+SELECT * FROM t_student WHERE stuid&gt;115;    
+</code></pre><h3 id="4-2列重命名"><a href="#4-2列重命名" class="headerlink" title="4.2列重命名"></a>4.2列重命名</h3><pre><code>-- select 字段1 as 新字段1, 字段2 as 新字段2,... from 表名;
+-- 注意： 这儿的as可以省略
+SELECT stuid as &#39;学号&#39;, stuname, gender as &#39;性别&#39; FROM t_student;    
+-- 对查询结果中的stuid和gender字段进行重命名
+</code></pre><h3 id="4-3对查询结果重新赋值-一般针对布尔数据"><a href="#4-3对查询结果重新赋值-一般针对布尔数据" class="headerlink" title="4.3对查询结果重新赋值(一般针对布尔数据)"></a>4.3对查询结果重新赋值(一般针对布尔数据)</h3><pre><code>-- select if(字段名,值1,值2) from 表名;    
+-查询指定字段，并且判断字段对应的值是0还是1，如果是1结果为值1，否则为值2
+-- 注意: 这儿的if的用法是MySQL专有的
+-- MySQL写法: if(字段, 新值1, 新值2)
+SELECT stuname,if(gender,&#39;男&#39;,&#39;女&#39;) as &#39;性别&#39; FROM t_student;    
+-- 通用写法:  case 字段 when 值 then 新值1 else 新值2 end
+SELECT case gender WHEN 1 THEN &#39;男&#39; ELSE &#39;女&#39; END as &#39;性别&#39; FROM t_student;
+</code></pre><h3 id="4-4对列进行合并"><a href="#4-4对列进行合并" class="headerlink" title="4.4对列进行合并"></a>4.4对列进行合并</h3><pre><code>-- select concat(字段1,字段2,...) from 表名;
+SELECT CONCAT(stuname,stuid) as &#39;name_id&#39; FROM t_student;
+SELECT CONCAT(stuname,&#39;:&#39;,stuid) as &#39;name_id&#39; FROM t_student;
+-- 注意: 数字和字符串数据可以合并，bit类型的数据不可以合并
+-- SELECT CONCAT(stuname,&#39;:&#39;,gender) as &#39;name_id&#39; FROM t_student;   
+</code></pre><h3 id="4-5模糊查询-查询的时候时候通过like条件来指定查询对象"><a href="#4-5模糊查询-查询的时候时候通过like条件来指定查询对象" class="headerlink" title="4.5模糊查询 - 查询的时候时候通过like条件来指定查询对象"></a>4.5模糊查询 - 查询的时候时候通过like条件来指定查询对象</h3><pre><code>-- sql中支持逻辑运算符and(逻辑与运算)和or(逻辑或运算)，not(逻辑非)
+SELECT * FROM t_student WHERE stuname like &#39;%飞%&#39; or not stuid &lt; 110;  
+</code></pre><h3 id="4-6排序-先按之前的任何语法进行查询在排序"><a href="#4-6排序-先按之前的任何语法进行查询在排序" class="headerlink" title="4.6排序(先按之前的任何语法进行查询在排序)"></a>4.6排序(先按之前的任何语法进行查询在排序)</h3><pre><code>-- select * from 表名 order by 字段;      
+- 对查询结果按照指定字段的值进行升序排序 
+-- select * from 表名 order by 字段 asc;     
+ - 对查询结果按照指定字段的值进行升序排序 
+-- select * from 表名 order by 字段 desc;      
+- 对查询结果按照指定字段的值进行降序排序
+SELECT * FROM t_student ORDER BY gender;    -- 按性别升序排序
+SELECT * FROM t_student ORDER BY stuid ASC;  -- 按学号升序排序
+SELECT * FROM t_student ORDER BY stuid DESC;  -- 按学号降序排序
+</code></pre><p> <strong>排序的时候可以通过在order by的后边加多个字段，进行联排。排序的时候前面的字段的优先级高些<br>SELECT * FROM t_student ORDER BY gender ASC, stuid DESC;   – 先按性别进行升序排序，然后再按学号降序排序。</strong>  </p>
+<h3 id="4-7限制"><a href="#4-7限制" class="headerlink" title="4.7限制"></a>4.7限制</h3><pre><code>-- select * from 表名 limit N;    -- 获取查询结果的前N条记录
+SELECT * FROM t_student LIMIT 3;   -- 获取查询结果的前3条记录
+
+-- select * from 表名 limit M offset N;   
+-- 对查询结果跳过前N条数据，取M条数据出来  
+SELECT * FROM t_student LIMIT 3 offset 4;  -- 跳过前4数据，然后取3条数据
 </code></pre>
-<p>b) 安装nginx</p>
-<pre class=" language-python"><code class="language-python">    yum install nginx
-</code></pre>
-<p>c) 运行nginx<br>Nginx不会自行启动。要运行Nginx  </p>
-<pre><code>    systemctl start nginx
-</code></pre><p>nginx的运行命令:  </p>
-<pre><code>    systemctl status nginx 查看nginx的状态  
-    systemctl start/stop/enable/disable nginx 启动/关闭/设置开机启动/禁止开机启动  
-</code></pre><p>d) 系统启动时启动Nginx  </p>
-<pre><code>    systemctl enable nginx
-</code></pre><p>e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信：   </p>
-<pre><code>    sudo firewall-cmd --permanent --zone=public --add-service=http 
-
-    sudo firewall-cmd --permanent --zone=public --add-service=https
-
-    sudo firewall-cmd --reload
-</code></pre><h3 id="3-nginx目录共享配置"><a href="#3-nginx目录共享配置" class="headerlink" title="3.nginx目录共享配置"></a>3.nginx目录共享配置</h3><p>a) 在contOS目录中确定一个需要共享的文件夹，例如： /home/yuting<br>b) 打开 etc/nginx/nginx.conf 文件，设置server</p>
-<pre><code>    #共享设置 - 在浏览器中输入服务器ip地址，会展示共享目录的文件列表
-    root /home/yuting;
-    location / {
-           autoindex on;
-           autoindex_exact_size on;
-           autoindex_localtime on;
-    }  
-</code></pre><p>除了可以共享文件，还可以自定义页面</p>
-<pre><code>    #自定义服务器页面
-    location / {
-            root /home/yuting;
-            index index.html index.htm;
-    }
-</code></pre><p>注意： 如果出现权限问题，可以修改目录的权限  </p>
-<h1 id="ssh密钥认证"><a href="#ssh密钥认证" class="headerlink" title="ssh密钥认证"></a>ssh密钥认证</h1><p>1.在主机和从机上执行：<code>ssh-keygen</code></p>
-<p>2.在从机上执行:  <code>scp  id_rsa.pub  root@主机地址:~/.ssh/master.pub</code><br>(上面这条指令是将从机上的 id_rsa.pub文件拷贝传递给到主机的.ssh文件夹下，并且命名为’master.pub’)</p>
-<p>3.在主机中的.ssh文件夹中创建authorized_keys文件： <code>touch authorized_keys</code> </p>
-<p>4.修改文件authorized_keys的权限: <code>chmod 600  authorized_keys</code>  </p>
-<p>5.将master.pub放进authorized_keys文件中:  <code>cat master.pub &gt;&gt;  authorized_keys</code></p>
-<p>6.在操作主机的时候，需要主机能够自己免密访问自己就将自己的公钥放在自己的authorized_keys文件中</p>
-
             </div>
             <hr>
 
@@ -620,7 +686,7 @@
                     </span>
                     <a href="https://github.com/LeeJune1992" class="b-link-green">leejune</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/21/nginx-fu-wu-qi-an-zhuang/" class="b-link-green">Nginx服务器</a>
+                    <a href="/2019/02/25/mysql-ji-ben-yu-fa-zheng-li/" class="b-link-green">mysql基本语法整理</a>
                 </p>
             </div>
         </div>
@@ -902,39 +968,38 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/02/21/mysql-pei-zhi/">
+                <a href="/2019/02/25/mysql-ji-ben-yu-fa-zheng-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="MySQL配置">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="mysql基本语法整理">
                         
-                        <span class="card-title">MySQL配置</span>
+                        <span class="card-title">mysql基本语法整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">MySQL配置  
-
-下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm  
-
-安装MySQL源: yum locali</div>
+                    <div class="summary">SQL语法DDL(数据定义语言)DML(数据操作语言）DCL(数据控制语言)注意: SQL中大小写不敏感（大写和小写是一样的）; 每条SQL语句必须以分号结束
+一.DDL - 主要提供数据库和表的创建、删除和修改0. 删除数据库: drop</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MySQL/" class="post-category" target="_blank">
-                                    MySQL
+                            <a href="/categories/mysql/" class="post-category" target="_blank">
+                                    mysql
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -953,28 +1018,27 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/21/zheng-ze-biao-da-shi/">
+                <a href="/2019/02/23/python3-zhong-de-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="正则表达式（python3）">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="python3中的类和对象科普">
                         
-                        <span class="card-title">正则表达式（python3）</span>
+                        <span class="card-title">python3中的类和对象科普</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1.什么是正则表达式(语法通用)正则就是一种用来做字符串匹配的工具,通过不同的符号匹配不同的字符
-2.python对正则表达式的支持通过re模块提供相应支持正则表达式的方法a.fullmatch(正则表达式, 字符串)  –&gt; 用正则</div>
+                    <div class="summary">类属性和类方法目标类的结构类属性和实例属性类方法和静态方法01. 类的结构1.1 术语 —— 实例使用面相对象开发，第 1 步 是设计 类使用 类名() 创建对象，创建对象 的动作有两步：1) 在内存中为对象 分配空间2) 调用初始化方法 </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/正则表达式/" class="post-category" target="_blank">
-                                    正则表达式
+                            <a href="/categories/类和对象/" class="post-category" target="_blank">
+                                    类和对象
                                 </a>
                             
                             
@@ -984,8 +1048,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/正则表达式/" target="_blank">
-                        <span class="chip bg-color">正则表达式</span>
+                    <a href="/tags/类和对象/" target="_blank">
+                        <span class="chip bg-color">类和对象</span>
                     </a>
                     
                 </div>

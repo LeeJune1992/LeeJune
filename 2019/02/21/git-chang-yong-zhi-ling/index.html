@@ -5,12 +5,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="git常用指令, leejune">
-    <meta name="description" content="git常用指令
-1.基本指令
-git init       ——  新建git仓库
-git add 文件/文件夹       ——  将文件添加到缓存区中
-git add -A       --- 添加所有内容到缓存区中
-git stuta">
+    <meta name="description" content="git常用指令1.基本指令git init &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  新建git仓库git add 文件/文件夹 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ——  将文件添加到">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -417,14 +412,14 @@ git stuta">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        521
+                        608
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -440,31 +435,16 @@ git stuta">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>git常用指令</h1>
-<h2>1.基本指令</h2>
-<p><code>git init</code>       ——  新建git仓库<br>
-<code>git add 文件/文件夹</code>       ——  将文件添加到缓存区中<br>
-<code>git add -A</code>       --- 添加所有内容到缓存区中
-<code>git stutas</code>      ———    查看git状态<br>
-<code>git commit -m ‘提交信息’</code>       ——  将缓存区中的内容全部提交到git本地仓库中</p>
-<p><code>git log</code>        ——-    查看提交日志</p>
-<p><code>git reset - - hard HEAD</code>       ——   让工作目录中的内容和仓库中的内容保持一致<br>
-<code>git reset --hard HEAD^</code>        ——  回到上一个版本<br>
-<code>git reset - - hard 版本号</code>       ——  回到指定的版本<br>
-<code>git checkout - - 文件名</code>        ——  从暂存区中恢复工作目录中的内容(让工作区中的指定文件，回到上次提交的时候的状态)</p>
-<p><code>git clone &lt;url&gt;</code> - 将服务器上的项目(仓库)克隆 (使用https地址需要输入密码，使用ssh地址需要添加公钥)</p>
-<p><code>git remote add origin 地址</code>  	     ----- 关联远程仓库(只需要关联一次)</p>
-<p><code>git push [-u] origin master</code>       ----- 提交(-u在第一次提交分之的时候才用)</p>
-<h2>2.分之管理</h2>
-<p>创建仓库会默认给我们创建一个master分之,这个分之一般作为提交和发布分之;开发一般会自己创建一个develop分之，用来开发和测试;多人协作的时候还可能根据不同的人或者(不同的功能)创建不同的分之，用来独立开发</p>
-<p>常见分之： master(主要是合并develop), develop(主要合并下面的其他分支), 功能/人员分之(开发)</p>
-<p><code>git branch [-a]</code>        		- 查看分之<br>
-<code>git branch 分之名</code>		     - 创建分之<br>
-<code>git checkout 分支名</code>		     -   切换分之<br>
-<code>git checkout -b 分之名</code>		     	- 切换并创建新的分之<br>
-<code>git diff	分之1 分之2</code>		     - 查看两个分之之间的差异<br>
-<code>git merge 分之名</code>			     - 让当前分之和指定分之进行合并</p>
-<p>注意: 切换分之、push、pull，这些操作前要保证工作区是clean</p>
+                <h1 id="git常用指令"><a href="#git常用指令" class="headerlink" title="git常用指令"></a>git常用指令</h1><h2 id="1-基本指令"><a href="#1-基本指令" class="headerlink" title="1.基本指令"></a>1.基本指令</h2><p><code>git init</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  新建git仓库<br><code>git add 文件/文件夹</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  将文件添加到缓存区中<br><code>git add -A</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — 添加所有内容到缓存区中<br><code>git stutas</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———    查看git状态<br><code>git commit -m  ‘提交信息’</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  将缓存区中的内容全部提交到git本地仓库中  </p>
+<p><code>git log</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——-    查看提交日志  </p>
+<p><code>git reset  - - hard   HEAD</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——   让工作目录中的内容和仓库中的内容保持一致<br><code>git reset  --hard HEAD^</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  回到上一个版本<br><code>git  reset  - - hard 版本号</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——  回到指定的版本<br><code>git checkout  - -  文件名</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  从暂存区中恢复工作目录中的内容(让工作区中的指定文件，回到上次提交的时候的状态)  </p>
+<p><code>git clone &lt;url&gt;</code> - 将服务器上的项目(仓库)克隆 (使用https地址需要输入密码，使用ssh地址需要添加公钥)  </p>
+<p><code>git remote add origin 地址</code>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—– 关联远程仓库(只需要关联一次)</p>
+<p><code>git push [-u] origin master</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—– 提交(-u在第一次提交分之的时候才用)  </p>
+<h2 id="2-分之管理"><a href="#2-分之管理" class="headerlink" title="2.分之管理"></a>2.分之管理</h2><p>创建仓库会默认给我们创建一个master分之,这个分之一般作为提交和发布分之;开发一般会自己创建一个develop分之，用来开发和测试;多人协作的时候还可能根据不同的人或者(不同的功能)创建不同的分之，用来独立开发  </p>
+<p>常见分之： master(主要是合并develop), develop(主要合并下面的其他分支), 功能/人员分之(开发)  </p>
+<p><code>git branch [-a]</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        - 查看分之<br><code>git branch 分之名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 创建分之<br><code>git checkout   分支名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-   切换分之<br><code>git checkout -b 分之名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    - 切换并创建新的分之<br><code>git diff    分之1  分之2</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 查看两个分之之间的差异<br><code>git merge 分之名</code>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 让当前分之和指定分之进行合并     </p>
+<p>注意: 切换分之、push、pull，这些操作前要保证工作区是clean  </p>
 <p>怎么避免冲突：  不要发生多个分之对同一个文件在同一个版本下进行修改(和同伴确认和商量)</p>
 
             </div>
@@ -900,13 +880,11 @@ git stuta">
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Hexo博客搭建
-1. 搭建博客
-使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js
+                    <div class="summary">Hexo博客搭建   
+1. 搭建博客使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   
 
-首先在自己的电脑上创建一个空的文件夹'Hexo'
-在gitbash中终端中通过cd指令进入到刚才创建的文件夹中
-输入指令 npm </div>
+首先在自己的电脑上创建一个空的文件夹’Hexo’  
+在gitbash中终端中通过cd指令进入到刚才创建的文件夹中   </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -951,13 +929,11 @@ git stuta">
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">MySQL配置
+                    <div class="summary">MySQL配置  
 
+下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm  
 
-下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
-
-
-安装MySQL源: yum localins</div>
+安装MySQL源: yum locali</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -1089,7 +1065,7 @@ git stuta">
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">13.7k</span>
+                <span class="white-color">15.9k</span>
             
 
             

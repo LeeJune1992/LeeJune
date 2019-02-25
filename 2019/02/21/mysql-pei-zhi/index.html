@@ -5,13 +5,11 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="MySQL配置, leejune">
-    <meta name="description" content="MySQL配置
+    <meta name="description" content="MySQL配置  
 
+下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm  
 
-下载MySQL源安装包: wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
-
-
-安装MySQL源: yum localins">
+安装MySQL源: yum locali">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -418,7 +416,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        248
+                        254
                     </div>
                     
 
@@ -441,40 +439,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>MySQL配置</p>
+                <p>MySQL配置  </p>
 <ol>
-<li>
-<p>下载MySQL源安装包: <code>wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</code></p>
+<li><p>下载MySQL源安装包: <code>wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</code>  </p>
 </li>
-<li>
-<p>安装MySQL源: <code>yum localinstall mysql57-community-release-el7-8.noarch.rpm</code></p>
+<li><p>安装MySQL源: <code>yum localinstall mysql57-community-release-el7-8.noarch.rpm</code></p>
 </li>
-<li>
-<p>安装MySQL:  <code>yum install mysql-community-server</code></p>
+<li><p>安装MySQL:  <code>yum install mysql-community-server</code>  </p>
 </li>
-<li>
-<p>设置开启启动MySQL服务: <code>systemctl enable mysqld</code></p>
+<li><p>设置开启启动MySQL服务: <code>systemctl enable mysqld</code>  </p>
 </li>
-<li>
-<p>启动/重启MySQL服务：systemctl restart mysqld</p>
-</li>
-<li>
-<p>查看MySQL初始密码：grep 'A temporary password' /var/log/mysqld.log</p>
-</li>
-<li>
-<p>更改MySQL密码：mysqladmin -u root -p'旧密码' password '新密码'<br>
-这里更改密码出了问题，更改失败，这是因为密码太过简单的原因。有两个接解决方法：</p>
-</li>
+<li>启动/重启MySQL服务：systemctl restart mysqld  </li>
+<li>查看MySQL初始密码：grep ‘A temporary password’ /var/log/mysqld.log  </li>
+<li>更改MySQL密码：mysqladmin -u root -p’旧密码’ password ‘新密码’<br> 这里更改密码出了问题，更改失败，这是因为密码太过简单的原因。有两个接解决方法：</li>
 </ol>
-<p>方法一：把密码设置复杂点（这是最直接的方法）</p>
-<p>方法二：关闭mysql密码强度验证(validate_password)</p>
-<p>编辑配置文件：<code>vim /etc/my.cnf</code>， 增加这么一行validate_password=off</p>
-<p>编辑后重启mysql服务：<code>systemctl restart mysqld</code></p>
+<p>　　　　方法一：把密码设置复杂点（这是最直接的方法）</p>
+<p>　　　　方法二：关闭mysql密码强度验证(validate_password)</p>
+<p>　　　　　　　　编辑配置文件：<code>vim /etc/my.cnf</code>， 增加这么一行validate_password=off</p>
+<p>　　　　　　　　编辑后重启mysql服务：<code>systemctl restart mysqld</code>  
+　　　　　　　　  
+　　　　　　　　  </p>
 <ol start="8">
-<li>设置mysql能够远程访问:<br>
-a. 登录进MySQL:  <code>mysql -uroot -p密码</code><br>
-b. 增加一个用户给予访问权限: <code>grant all privileges on *.* to 'root'@'ip地址' identified by '密码' with grant option;</code><br>
-c. 刷新权限：<code>flush privileges;­</code></li>
+<li>设置mysql能够远程访问:<br> a. 登录进MySQL:  <code>mysql -uroot -p密码</code><br> b. 增加一个用户给予访问权限: <code>grant all privileges on *.* to &#39;root&#39;@&#39;ip地址&#39; identified by &#39;密码&#39; with grant option;</code><br> c. 刷新权限：<code>flush privileges;­</code>  </li>
 </ol>
 
             </div>
@@ -910,12 +896,7 @@ c. 刷新权限：<code>flush privileges;­</code></li>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">git常用指令
-1.基本指令
-git init       ——  新建git仓库
-git add 文件/文件夹       ——  将文件添加到缓存区中
-git add -A       --- 添加所有内容到缓存区中
-git stuta</div>
+                    <div class="summary">git常用指令1.基本指令git init &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  新建git仓库git add 文件/文件夹 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ——  将文件添加到</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -960,16 +941,10 @@ git stuta</div>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Nginx服务器
-1.阿里云添加80端口
-阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
+                    <div class="summary">Nginx服务器1.阿里云添加80端口阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口
 
-
-
-
-2. 安装nginx
-a) 添加nginx存储库
-	yum i</div>
+2. 安装nginxa) 添加nginx存储库  
+    yum in</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
@@ -1101,7 +1076,7 @@ a) 添加nginx存储库
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">13.7k</span>
+                <span class="white-color">15.9k</span>
             
 
             

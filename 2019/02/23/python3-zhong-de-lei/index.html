@@ -5,18 +5,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="python3中的类和对象科普, leejune">
-    <meta name="description" content="类属性和类方法
-目标
-类的结构
-类属性和实例属性
-类方法和静态方法
-01. 类的结构
-1.1 术语 —— 实例
-使用面相对象开发，第 1 步 是设计 类
-使用 类名() 创建对象，创建对象 的动作有两步：
-
-在内存中为对象 分配空间
-调用初">
+    <meta name="description" content="类属性和类方法目标类的结构类属性和实例属性类方法和静态方法01. 类的结构1.1 术语 —— 实例使用面相对象开发，第 1 步 是设计 类使用 类名() 创建对象，创建对象 的动作有两步：1) 在内存中为对象 分配空间2) 调用初始化方法 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -423,7 +412,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.8k
+                        1.7k
                     </div>
                     
 
@@ -446,35 +435,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>类属性和类方法</h1>
-<h2>目标</h2>
-<h3>类的结构</h3>
-<h3>类属性和实例属性</h3>
-<h3>类方法和静态方法</h3>
-<h2>01. 类的结构</h2>
-<h3>1.1 术语 —— 实例</h3>
-<p>使用面相对象开发，第 1 步 是设计 类
-使用 类名() 创建对象，创建对象 的动作有两步：</p>
-<ol>
-<li>在内存中为对象 分配空间</li>
-<li>调用初始化方法 <strong>init</strong> 为 对象初始化
-对象创建后，内存中就有了一个对象的 实实在在 的存在——实例</li>
-</ol>
-<p><img src="http://pnbdq6q26.bkt.clouddn.com/017_%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BEI.png" alt="类的结构示意图I"><br>
-因此，通常也会把：</p>
-<p>1).创建出来的 对象 叫做 类 的 实例&lt;br&gt;
-2).创建对象的 动作 叫做 实例化&lt;br&gt;
-3).对象的属性 叫做 实例属性&lt;br&gt;
-4).对象调用的方法 叫做 实例方法&lt;br&gt;</p>
-<p>在程序执行时：&lt;br&gt;
-对象各自拥有自己的 实例属性&lt;br&gt;
-调用对象方法，可以通过 self.&lt;br&gt;
-访问自己的属性&lt;br&gt;
-调用自己的方法&lt;br&gt;</p>
+                <h1 id="类属性和类方法"><a href="#类属性和类方法" class="headerlink" title="类属性和类方法"></a>类属性和类方法</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><h3 id="类的结构"><a href="#类的结构" class="headerlink" title="类的结构"></a>类的结构</h3><h3 id="类属性和实例属性"><a href="#类属性和实例属性" class="headerlink" title="类属性和实例属性"></a>类属性和实例属性</h3><h3 id="类方法和静态方法"><a href="#类方法和静态方法" class="headerlink" title="类方法和静态方法"></a>类方法和静态方法</h3><h2 id="01-类的结构"><a href="#01-类的结构" class="headerlink" title="01. 类的结构"></a>01. 类的结构</h2><h3 id="1-1-术语-——-实例"><a href="#1-1-术语-——-实例" class="headerlink" title="1.1 术语 —— 实例"></a>1.1 术语 —— 实例</h3><p>使用面相对象开发，第 1 步 是设计 类<br>使用 类名() 创建对象，创建对象 的动作有两步：<br>1) 在内存中为对象 分配空间<br>2) 调用初始化方法 <strong>init</strong> 为 对象初始化<br>对象创建后，内存中就有了一个对象的 实实在在 的存在——实例</p>
+<p><img src="http://pnbdq6q26.bkt.clouddn.com/017_%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BEI.png" alt="类的结构示意图I"><br>因此，通常也会把：</p>
+<p>1).创建出来的 对象 叫做 类 的 实例<br><br>2).创建对象的 动作 叫做 实例化<br><br>3).对象的属性 叫做 实例属性<br><br>4).对象调用的方法 叫做 实例方法<br></p>
+<p>在程序执行时：<br><br>对象各自拥有自己的 实例属性<br><br>调用对象方法，可以通过 self.<br><br>访问自己的属性<br><br>调用自己的方法<br></p>
 <p>结论</p>
 <p>每一个对象 都有自己 独立的内存空间，保存各自不同的属性多个对象的方法，在内存中只有一份，在调用方法时，需要把对象的引用 传递到方法内部</p>
-<h3>1.2 类是一个特殊的对象</h3>
-<p>Python 中 一切皆对象：</p>
+<h3 id="1-2-类是一个特殊的对象"><a href="#1-2-类是一个特殊的对象" class="headerlink" title="1.2 类是一个特殊的对象"></a>1.2 类是一个特殊的对象</h3><p>Python 中 一切皆对象：</p>
 <pre><code>    class AAA: 定义的类属于 类对象
     obj1 = AAA() 属于 实例对象
 
@@ -485,60 +452,41 @@
     类属性
     类方法
 通过 类名. 的方式可以 访问类的属性 或者 调用类的方法
-</code></pre>
-<p><img src="http://pnbdq6q26.bkt.clouddn.com/017_%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BEII.png" alt="类的结构示意图II"></p>
-<h2>02. 类属性和实例属性</h2>
-<h3>2.1 概念和使用</h3>
-<pre><code>类属性 就是给 类对象 中定义的 属性
+</code></pre><p><img src="http://pnbdq6q26.bkt.clouddn.com/017_%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BEII.png" alt="类的结构示意图II"></p>
+<h2 id="02-类属性和实例属性"><a href="#02-类属性和实例属性" class="headerlink" title="02. 类属性和实例属性"></a>02. 类属性和实例属性</h2><h3 id="2-1-概念和使用"><a href="#2-1-概念和使用" class="headerlink" title="2.1 概念和使用"></a>2.1 概念和使用</h3><pre><code>类属性 就是给 类对象 中定义的 属性
 通常用来记录 与这个类相关 的特征
 类属性 不会用于记录 具体对象的特征
-</code></pre>
-<p>示例需求</p>
+</code></pre><p>示例需求</p>
 <pre><code>定义一个 工具类
 每件工具都有自己的 name
 需求 —— 知道使用这个类，创建了多少个工具对象？
-</code></pre>
-<p><img src="http://pnbdq6q26.bkt.clouddn.com/018_%E7%B1%BB%E5%B1%9E%E6%80%A7%E6%A1%88%E4%BE%8BI.png" alt="类属性案例I"></p>
+</code></pre><p><img src="http://pnbdq6q26.bkt.clouddn.com/018_%E7%B1%BB%E5%B1%9E%E6%80%A7%E6%A1%88%E4%BE%8BI.png" alt="类属性案例I"></p>
 <pre><code>class Tool(object):
 
-	# 使用赋值语句，定义类属性，记录创建工具对象的总数
-	count = 0
+    # 使用赋值语句，定义类属性，记录创建工具对象的总数
+    count = 0
 
-	def __init__(self, name):
-    	self.name = name
+    def __init__(self, name):
+        self.name = name
 
-    	# 针对类属性做一个计数+1
-    	Tool.count += 1
-</code></pre>
-<h3>创建工具对象</h3>
-<pre><code>tool1 = Tool(&quot;斧头&quot;)
+        # 针对类属性做一个计数+1
+        Tool.count += 1
+</code></pre><h3 id="创建工具对象"><a href="#创建工具对象" class="headerlink" title="创建工具对象"></a>创建工具对象</h3><pre><code>tool1 = Tool(&quot;斧头&quot;)
 tool2 = Tool(&quot;榔头&quot;)
 tool3 = Tool(&quot;铁锹&quot;)
-</code></pre>
-<h3>知道使用 Tool 类到底创建了多少个对象?</h3>
-<pre><code>print(&quot;现在创建了 %d 个工具&quot; % Tool.count)
-</code></pre>
-<h3>2.2 属性的获取机制（科普）</h3>
-<p>在 Python 中 属性的获取 存在一个 向上查找机制</p>
-<p>通过对象访问类属性
-<img src="http://pnbdq6q26.bkt.clouddn.com/019_%E9%80%9A%E8%BF%87%E5%AF%B9%E8%B1%A1%E8%AE%BF%E9%97%AE%E7%B1%BB%E5%B1%9E%E6%80%A7.png" alt="通过对象访问类属性">
-因此，要访问类属性有两种方式：
-类名.类属性
-对象.类属性 （不推荐）</p>
-<p>注意:
-如果使用 对象.类属性 = 值 赋值语句，只会 给对象添加一个属性，而不会影响到 类属性的值</p>
-<h2>03. 类方法和静态方法</h2>
-<h3>3.1 类方法</h3>
-<pre><code>类属性 就是针对 类对象 定义的属性
+</code></pre><h3 id="知道使用-Tool-类到底创建了多少个对象"><a href="#知道使用-Tool-类到底创建了多少个对象" class="headerlink" title="知道使用 Tool 类到底创建了多少个对象?"></a>知道使用 Tool 类到底创建了多少个对象?</h3><pre><code>print(&quot;现在创建了 %d 个工具&quot; % Tool.count)
+</code></pre><h3 id="2-2-属性的获取机制（科普）"><a href="#2-2-属性的获取机制（科普）" class="headerlink" title="2.2 属性的获取机制（科普）"></a>2.2 属性的获取机制（科普）</h3><p>在 Python 中 属性的获取 存在一个 向上查找机制</p>
+<p>通过对象访问类属性<br><img src="http://pnbdq6q26.bkt.clouddn.com/019_%E9%80%9A%E8%BF%87%E5%AF%B9%E8%B1%A1%E8%AE%BF%E9%97%AE%E7%B1%BB%E5%B1%9E%E6%80%A7.png" alt="通过对象访问类属性"><br>因此，要访问类属性有两种方式：<br>类名.类属性<br>对象.类属性 （不推荐）</p>
+<p>注意:<br>如果使用 对象.类属性 = 值 赋值语句，只会 给对象添加一个属性，而不会影响到 类属性的值</p>
+<h2 id="03-类方法和静态方法"><a href="#03-类方法和静态方法" class="headerlink" title="03. 类方法和静态方法"></a>03. 类方法和静态方法</h2><h3 id="3-1-类方法"><a href="#3-1-类方法" class="headerlink" title="3.1 类方法"></a>3.1 类方法</h3><pre><code>类属性 就是针对 类对象 定义的属性
     使用 赋值语句 在 class 关键字下方可以定义 类属性
     类属性 用于记录 与这个类相关 的特征
 类方法 就是针对 类对象 定义的方法
     在 类方法 内部可以直接访问 类属性 或者调用其他的 类方法
-</code></pre>
-<p>语法如下</p>
+</code></pre><p>语法如下</p>
 <pre><code>@classmethod
 def 类方法名(cls):
-	pass
+    pass
 
 类方法需要用 修饰器 @classmethod 来标识，告诉解释器这是一个类方法
 类方法的 第一个参数 应该是 cls
@@ -549,51 +497,41 @@ def 类方法名(cls):
 在方法内部
     可以通过 cls. 访问类的属性
     也可以通过 cls. 调用其他的类方法
-</code></pre>
-<p>示例需求
-定义一个 工具类&lt;br&gt;
-每件工具都有自己的 name&lt;br&gt;
-需求 —— 在 类 封装一个 show_tool_count 的类方法，输出使用当前这个类，创建的对象个数&lt;br&gt;</p>
-<p>类方法案例￼
-<img src="http://pnbdq6q26.bkt.clouddn.com/020_%E7%B1%BB%E6%96%B9%E6%B3%95%E6%A1%88%E4%BE%8B.png" alt="类方法案例"></p>
+</code></pre><p>示例需求<br>定义一个 工具类<br><br>每件工具都有自己的 name<br><br>需求 —— 在 类 封装一个 show_tool_count 的类方法，输出使用当前这个类，创建的对象个数<br></p>
+<p>类方法案例￼<br><img src="http://pnbdq6q26.bkt.clouddn.com/020_%E7%B1%BB%E6%96%B9%E6%B3%95%E6%A1%88%E4%BE%8B.png" alt="类方法案例"></p>
 <pre><code>@classmethod
 def show_tool_count(cls):
-	&quot;&quot;&quot;显示工具对象的总数&quot;&quot;&quot;
-	print(&quot;工具对象的总数 %d&quot; % cls.count)
+    &quot;&quot;&quot;显示工具对象的总数&quot;&quot;&quot;
+    print(&quot;工具对象的总数 %d&quot; % cls.count)
 
 在类方法内部，可以直接使用 cls 访问 类属性 或者 调用类方法
-</code></pre>
-<h3>3.2 静态方法</h3>
-<pre><code>在开发时，如果需要在 类 中封装一个方法，这个方法：
+</code></pre><h3 id="3-2-静态方法"><a href="#3-2-静态方法" class="headerlink" title="3.2 静态方法"></a>3.2 静态方法</h3><pre><code>在开发时，如果需要在 类 中封装一个方法，这个方法：
     既 不需要 访问 实例属性 或者调用 实例方法
     也 不需要 访问 类属性 或者调用 类方法
 
 这个时候，可以把这个方法封装成一个 静态方法
-</code></pre>
-<p>语法如下</p>
+</code></pre><p>语法如下</p>
 <pre><code>@staticmethod
 def 静态方法名():
-	pass
+    pass
 
 静态方法 需要用 修饰器 @staticmethod 来标识，告诉解释器这是一个静态方法
 通过 类名. 调用 静态方法
 
 class Dog(object):
 
-	# 狗对象计数
-	dog_count = 0
+    # 狗对象计数
+    dog_count = 0
 
-	@staticmethod
-	def run():
-    
-    	# 不需要访问实例属性也不需要访问类属性的方法
-    	print(&quot;狗在跑...&quot;)
+    @staticmethod
+    def run():
 
-	def __init__(self, name):
-    	self.name = name
-</code></pre>
-<h2>3.3 方法综合案例</h2>
-<p>需求</p>
+        # 不需要访问实例属性也不需要访问类属性的方法
+        print(&quot;狗在跑...&quot;)
+
+    def __init__(self, name):
+        self.name = name
+</code></pre><h2 id="3-3-方法综合案例"><a href="#3-3-方法综合案例" class="headerlink" title="3.3 方法综合案例"></a>3.3 方法综合案例</h2><p>需求</p>
 <pre><code>设计一个 Game 类
 属性：
     定义一个 类属性 top_score 记录游戏的 历史最高分
@@ -606,40 +544,33 @@ class Dog(object):
     1) 查看帮助信息
     2) 查看历史最高分
     3) 创建游戏对象，开始游戏
-</code></pre>
-<p>方法综合案例
-<img src="http://pnbdq6q26.bkt.clouddn.com/021_%E6%96%B9%E6%B3%95%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B.png" alt="方法综合案例">
-案例小结</p>
-<p>实例方法 —— 方法内部需要访问 实例属性&lt;br&gt;
-实例方法 内部可以使用 类名. 访问类属性&lt;br&gt;
-类方法 —— 方法内部 只 需要访问 类属性&lt;br&gt;
-静态方法 —— 方法内部，不需要访问 实例属性 和 类属性</p>
+</code></pre><p>方法综合案例<br><img src="http://pnbdq6q26.bkt.clouddn.com/021_%E6%96%B9%E6%B3%95%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B.png" alt="方法综合案例"><br>案例小结</p>
+<p>实例方法 —— 方法内部需要访问 实例属性<br><br>实例方法 内部可以使用 类名. 访问类属性<br><br>类方法 —— 方法内部 只 需要访问 类属性<br><br>静态方法 —— 方法内部，不需要访问 实例属性 和 类属性</p>
 <p>提问:</p>
 <p>如果方法内部 即需要访问 实例属性，又需要访问 类属性，应该定义成什么方法？</p>
 <p>答案:</p>
-<p>应该定义 实例方法
-因为，类只有一个，在 实例方法 内部可以使用 类名. 访问类属性</p>
+<p>应该定义 实例方法<br>因为，类只有一个，在 实例方法 内部可以使用 类名. 访问类属性</p>
 <pre><code>class Game(object):
 
-	# 游戏最高分，类属性
-	top_score = 0
+    # 游戏最高分，类属性
+    top_score = 0
 
-	@staticmethod
-	def show_help():
-    	print(&quot;帮助信息：让僵尸走进房间&quot;)
-    
-	@classmethod
-	def show_top_score(cls):
-    	print(&quot;游戏最高分是 %d&quot; % cls.top_score)
+    @staticmethod
+    def show_help():
+        print(&quot;帮助信息：让僵尸走进房间&quot;)
 
-	def __init__(self, player_name):
-    	self.player_name = player_name
+    @classmethod
+    def show_top_score(cls):
+        print(&quot;游戏最高分是 %d&quot; % cls.top_score)
 
- def start_game(self):
-    	print(&quot;[%s] 开始游戏...&quot; % self.player_name)
-    
-    	# 使用类名.修改历史最高分
-    	Game.top_score = 999
+    def __init__(self, player_name):
+        self.player_name = player_name
+
+    def start_game(self):
+        print(&quot;[%s] 开始游戏...&quot; % self.player_name)
+
+        # 使用类名.修改历史最高分
+        Game.top_score = 999
 
 #1. 查看游戏帮助
 Game.show_help()
@@ -655,7 +586,6 @@ game.start_game()
 # 4. 游戏结束，查看游戏最高分
 Game.show_top_score()
 </code></pre>
-
             </div>
             <hr>
 
@@ -1077,53 +1007,41 @@ Game.show_top_score()
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/02/23/python3-zhong-de-lei/">
+                <a href="/2019/02/25/mysql-ji-ben-yu-fa-zheng-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="python3中的类和对象科普">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="mysql基本语法整理">
                         
-                        <span class="card-title">python3中的类和对象科普</span>
+                        <span class="card-title">mysql基本语法整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">类属性和类方法
-目标
-类的结构
-类属性和实例属性
-类方法和静态方法
-01. 类的结构
-1.1 术语 —— 实例
-使用面相对象开发，第 1 步 是设计 类
-使用 类名() 创建对象，创建对象 的动作有两步：
-
-在内存中为对象 分配空间
-调用初</div>
+                    <div class="summary">SQL语法DDL(数据定义语言)DML(数据操作语言）DCL(数据控制语言)注意: SQL中大小写不敏感（大写和小写是一样的）; 每条SQL语句必须以分号结束
+一.DDL - 主要提供数据库和表的创建、删除和修改0. 删除数据库: drop</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-25
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/类和对象/" class="post-category" target="_blank">
-                                    类和对象
+                            <a href="/categories/mysql/" class="post-category" target="_blank">
+                                    mysql
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/类和对象/" target="_blank">
-                        <span class="chip bg-color">类和对象</span>
+                    <a href="/tags/mysql/" target="_blank">
+                        <span class="chip bg-color">mysql</span>
                     </a>
                     
                 </div>
@@ -1147,9 +1065,7 @@ Game.show_top_score()
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">高级变量类型
-目标
-
+                    <div class="summary">高级变量类型目标
 列表
 元组
 字典
@@ -1158,18 +1074,12 @@ Game.show_top_score()
 变量高级
 
 知识点回顾
-
-
 Python 中数据类型可以分为 数字型 和 非数字型
-
-
 数字型
-
 整型 (int)
 浮点型（float）
-布尔型（bool）
-
-真 True 非 0 </div>
+布尔型（bool） 
+真 True 非 0 数 —— 非零</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-23
@@ -1301,7 +1211,7 @@ Python 中数据类型可以分为 数字型 和 非数字型
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">13.7k</span>
+                <span class="white-color">15.9k</span>
             
 
             
