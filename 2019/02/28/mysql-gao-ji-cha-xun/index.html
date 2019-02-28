@@ -4,10 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="进制与位运算, leejune">
-    <meta name="description" content="一、进制在计算机编程中，整数可以通过十进制、二进制、八进制和十六进制来表示
-1.十进制a.基数：0，1，2，3，4，5，6，7，8，9b.进位：逢10进1c.位权：123(10) = 310**0 + 2101 + 1*102
-2.二进制a">
+    <meta name="keywords" content="mysql高级查询知识整理, leejune">
+    <meta name="description" content="1 添加约束==============================1.创建表的时候添加约束CREATE TABLE if not EXISTS t_college
+(
+collid int, 
+collname VARCHAR(20)">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>进制与位运算 | leejune</title>
+    <title>mysql高级查询知识整理 | leejune</title>
     <link rel="icon" type="image/png" href="http://pnbdq6q26.bkt.clouddn.com/favicon.JPG">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -285,13 +286,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        进制与位运算
+                        mysql高级查询知识整理
                     </div>
                 </div>
             </div>
@@ -383,8 +384,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/进制与位运算/" target="_blank">
-                                <span class="chip bg-color">进制与位运算</span>
+                            <a href="/tags/mysql/" target="_blank">
+                                <span class="chip bg-color">mysql</span>
                             </a>
                         
                     </div>
@@ -395,8 +396,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/进制与位运算/" class="post-category" target="_blank">
-                                进制与位运算
+                            <a href="/categories/mysql/" class="post-category" target="_blank">
+                                mysql
                             </a>
                         
                     </div>
@@ -407,21 +408,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-02-23
+                    2019-02-28
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.2k
+                        2.3k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        9 分
                     </div>
                     
                 
@@ -437,78 +438,140 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、进制"><a href="#一、进制" class="headerlink" title="一、进制"></a>一、进制</h1><p>在计算机编程中，整数可以通过十进制、二进制、八进制和十六进制来表示</p>
-<h2 id="1-十进制"><a href="#1-十进制" class="headerlink" title="1.十进制"></a>1.十进制</h2><p>a.基数：0，1，2，3，4，5，6，7，8，9<br>b.进位：逢10进1<br>c.位权：123(10) = 3<em>10**0 + 2</em>10<strong>1 + 1*10</strong>2</p>
-<h2 id="2-二进制"><a href="#2-二进制" class="headerlink" title="2.二进制"></a>2.二进制</h2><p>a.基数：0，1<br>0111, 1100, 101010101, 1111100011<br>b.进位：逢2进1<br>100(2) == 4(10)   101(2) == 5(10)<br>c.位权：101(2) = 1<em>2**0 + 0</em>2<strong>1 + 1*2</strong>2 = 5</p>
-<h2 id="3-八进制"><a href="#3-八进制" class="headerlink" title="3.八进制"></a>3.八进制</h2><p>a.基数：0，1，2，3，4，5，6，7<br>76， 26， 11<br>b.进位：逢8进1<br>c.位权：123(8) = 3<em>8**0+2</em>8<strong>1+1*8</strong>2 = 3+16+64 = 83<br>111(8) = 8<strong>0+8</strong>1+8**2 = 1+8+64 = 73  </p>
-<h2 id="4-十六进制"><a href="#4-十六进制" class="headerlink" title="4.十六进制"></a>4.十六进制</h2><p>a.基数：0~9，a/A ~ f/F   – a/A(10), b/B(11), c/C(12), d/D(13), e/E(14), f/F(15)<br>1f, ff, abc, a00bf<br>b.进位：逢16进1<br>c.位权： 123(16) = 3<em>16**0 + 2</em>16<strong>1 + 1*16</strong>2 = 3+32+256=291</p>
-<h3 id="1-程序中怎么表示不同进制的数"><a href="#1-程序中怎么表示不同进制的数" class="headerlink" title="1.程序中怎么表示不同进制的数"></a>1.程序中怎么表示不同进制的数</h3><p> a.十进制<br> 在程序中直接写的数字都是10进制</p>
-<pre><code>num = 110   # 这是一个10进制数
-print(num)  # 直接打印其他进制数就会显示他的十进制
-</code></pre><p> b.二进制<br> <strong>0b/B+二进制数</strong></p>
-<pre><code>num = 0b1110
-print(num)   # 2+4+8
- num2 = 0b123   # 错误！
-print()
-print(bin(800))   # 获取一个数对应的二进制表示方式
-print(bin(0o671))  # 110111001
-print(bin(0xaf))   # 10101111
-print(bin(100))
-</code></pre><p> c.八进制<br> <strong>0o/O+八进制数</strong></p>
-<pre><code>num = 0o176
-print(num)
-num = 0o78    # 错误！
-print(oct(800))
-print(oct(0b111000101))   # 0o705
-</code></pre><p> d.十六进制<br><strong> 0x/X + 十六进制数</strong></p>
-<pre><code>num = 0xaf2
-print(num)
-num = 0xah   # 错误！
-</code></pre><pre><code>print(hex(19968))
-print(hex(175))
-print(hex(255))
-print(hex(0o456))
-</code></pre><pre><code>num1 = 17
-num2 = 0b10001
-num3 = 0o21
-num4 = 0x11
-print(num1, num2, num3, num4)
-</code></pre><pre><code>print(ord(&#39;一&#39;))
-print(&#39;aaa\u4e00kl&#39;)
-</code></pre><h1 id="二、位运算"><a href="#二、位运算" class="headerlink" title="二、位运算"></a>二、位运算</h1><h2 id="原码、反码、补码"><a href="#原码、反码、补码" class="headerlink" title="原码、反码、补码"></a>原码、反码、补码</h2><p><strong>计算机存储数据只能存储数字数据，而且存的是数字的补码。<br>计算机对数据进行运算的时候是使用补码进行运算的，将数据从计算机中读出来看到的是原码</strong></p>
-<p>##1.原码：符号位+真值<br>说明：<br>符号位: 最高位用0表示正数，1表示负数<br>真值: 去掉正负，数字对应的二进制值</p>
-<p>100的原码：01100100<br>-100的原码：11100100</p>
-<p>##2.反码：<br>正数的反码：就是原码<br>负数的反码：原码的符号位不变,其余的位数取反(0-&gt;1, 1-&gt;0)</p>
-<p>100的反码：01100100<br>-100的反码: 10011011</p>
-<p>##3.补码<br>正数的补码：还是原码<br>负数的补码: 反码加1</p>
-<p>100的补码：01100100<br>-100的反码：10011100  </p>
-<p>练习: -50的原码、反码、补码<br>原码:1110010<br>反码:1001101<br>补码:1001110</p>
-<h2 id="4-为什么计算机要存补码？"><a href="#4-为什么计算机要存补码？" class="headerlink" title="4.为什么计算机要存补码？"></a>4.为什么计算机要存补码？</h2><p><strong>因为计算中只有加法器，没有减法器</strong></p>
-<p>3 - 2 –&gt; 3 + (-2) = 1<br>2 - 3 –&gt; 2 + (-3) = -1</p>
-<p>-3的原码: 1011   反码:1100   补码:1101<br>2的原码: 0010<br>原码算:<br>2-3 = 0010+1011 = 1101(原)  = -5<br>补码算:<br>0010+1101 = 1111(补) = 1110(反) = 1001(原) = -1</p>
-<p>-3 + -2  = -5<br>-3原码: 1011  反：1100  补:1101<br>-2原码: 1010  反: 1101  补: 1110<br>原码算:<br>-3 + -2 = 1011+1010 = 0101(原) = 5<br>补码算:<br>1101+1110 = 1011(补)=1010(反)=1101(原) = -5</p>
-<h1 id="位运算-amp-按位与-按位或运算-按位取反-按位异或-gt-gt-右移-lt-lt-左移"><a href="#位运算-amp-按位与-按位或运算-按位取反-按位异或-gt-gt-右移-lt-lt-左移" class="headerlink" title="位运算: &amp;(按位与), |(按位或运算), ~(按位取反), ^(按位异或), &gt;&gt;(右移), &lt;&lt;(左移)"></a>位运算: &amp;(按位与), |(按位或运算), ~(按位取反), ^(按位异或), &gt;&gt;(右移), &lt;&lt;(左移)</h1><p>###a、 &amp;(按位与)<br>数字1 &amp; 数字2 –&gt; 每一位上的数都为1结果就是1，有0就是0<br>1 &amp; 1 = 1<br>1 &amp; 0 = 0<br>0 &amp; 1 = 0<br>0 &amp; 0 = 0<br>特点: 一个位上的数如果和1与，可以保留这个位上的数； 和0与可以置0<br>（重要）<br><strong>应用：判断一个数的奇偶性(如果一个数的二进制的最低位是1就是奇数，否则是偶数)</strong></p>
-<pre><code>num % 2 == 0  --&gt; num是偶数 (传统)
-num &amp; 1 == 0  --&gt; num是偶数
-num &amp; 1 == 1  --&gt; num是奇数
-print(3 &amp; 2)   # 0011 &amp; 0010 = 0010(补)
-print(-3 &amp; -2)
-</code></pre><p>-3: 1011(原) 1100(反) 1101(补)<br>-2: 原:1010  反: 1101  补: 1110<br>1101 &amp; 1110 = 1100(补)=1011(反)=1100(原)</p>
-<pre><code>print(2 &amp; 1, 200 &amp; 1, -100 &amp; 1)
-print(5 &amp; 1, 111 &amp; 1, -13 &amp; 1)
-</code></pre><p>###b、|(按位或运算)<br>数字1 | 数字2： 只要有1结果就是1，两个都为0结果才是0<br>1 | 1 = 1<br>1 | 0 = 1<br>0 | 1 = 1<br>0 | 0 = 0<br>特点: 和1或，置1</p>
-<pre><code>print(3 | 2)   # 0011 | 0010 = 0011(补)
-print(-3 | -2)  # 1101 | 1110 = 1111(补)=1110(反)=1001(原码)
-</code></pre><p>###c、~(按位取反)<br>~数字 : 将数字上的每一位取反<br>~1 = 0<br>~0 = 1</p>
-<pre><code>print(~3)   # ~0011 = 1100(补)=1011(反)=1100
-print(~-4)   #  ~~3 = 3
-</code></pre><p>###d、^(按位异或)（重要）<br>数字1 ^ 数字2 : 相同为0，不同为1<br>1 ^ 1 = 0<br>1 ^ 0 = 1<br>0 ^ 1 = 1<br>0 ^ 0 = 0<br>应用: 加密<br>判断2个数是否相等，相等等于0，不相等等于1</p>
-<pre><code>print(3 ^ 10997)   # 3 ^ 2 = 1
-print(10998 ^ 10997)   # 1 ^ 2 = 3
-</code></pre><p>###e、 &gt;&gt;(右移), &lt;&lt;(左移)（重要）<br>数字1 &lt;&lt; N：数字1左移N位, 数字1 * 2<strong>N<br>数字1 &gt;&gt; N: 数字1右移N位，数字1 // 2</strong>N<br>应用：快速乘2的次方/除2的次方</p>
-<pre><code>print(4 &lt;&lt; 1)
-print(-3 &lt;&lt; 2)
-print(5 &gt;&gt; 2)
+                <h1 id="1-添加约束"><a href="#1-添加约束" class="headerlink" title="1 添加约束=============================="></a>1 添加约束==============================</h1><h2 id="1-创建表的时候添加约束"><a href="#1-创建表的时候添加约束" class="headerlink" title="1.创建表的时候添加约束"></a>1.创建表的时候添加约束</h2><pre><code>CREATE TABLE if not EXISTS t_college
+(
+collid int, 
+collname VARCHAR(20) NOT NULL,   -- 创建表的时候添加约束
+website VARCHAR(1024), 
+intro VARCHAR(200),
+PRIMARY KEY(collid)
+);
+</code></pre><h2 id="2-通过添加约束索引的方式添加约束"><a href="#2-通过添加约束索引的方式添加约束" class="headerlink" title="2.通过添加约束索引的方式添加约束"></a>2.通过添加约束索引的方式添加约束</h2><h3 id="a-添加约束"><a href="#a-添加约束" class="headerlink" title="a.添加约束"></a>a.添加约束</h3><p>– alter table 表名 add constraint 索引名 约束 (字段名);<br><strong>– 说明: 索引名 - 自己随便命名，用来指向当前添加的约束； 约束 - 需要添加的约束(支持唯一约束、主键约束和外键约束)</strong></p>
+<pre><code>ALTER TABLE t_college ADD CONSTRAINT con_website UNIQUE (website);  
+-- 给t_college表中的website添加unique约束，约束索引为con_website
+</code></pre><h3 id="b-删除约束"><a href="#b-删除约束" class="headerlink" title="b.删除约束"></a>b.删除约束</h3><pre><code>-- alter table 表名 drop index 约束索引;
+ALTER TABLE t_college DROP index con_website;
+</code></pre><h1 id="2-外键和E-R图"><a href="#2-外键和E-R图" class="headerlink" title="2 外键和E.R图==========================="></a>2 外键和E.R图===========================</h1><h2 id="1-什么是外键：表中的某个字段的值是根据其他表中主键的值来确定的。那么这个字段就是外键"><a href="#1-什么是外键：表中的某个字段的值是根据其他表中主键的值来确定的。那么这个字段就是外键" class="headerlink" title="1.什么是外键：表中的某个字段的值是根据其他表中主键的值来确定的。那么这个字段就是外键"></a>1.什么是外键：表中的某个字段的值是根据其他表中主键的值来确定的。那么这个字段就是外键</h2><h3 id="1-1-多对一的外键的添加：-将外键添加到多的一方对应的表中"><a href="#1-1-多对一的外键的添加：-将外键添加到多的一方对应的表中" class="headerlink" title="1.1 多对一的外键的添加： 将外键添加到多的一方对应的表中"></a>1.1 多对一的外键的添加： 将外键添加到多的一方对应的表中</h3><p>–     一对一的外键的添加： 将外键随便添加到哪一方，同时添加值唯一约束<br>–     多对多的外键的添加： 关系型数据库中，两张表没法实现多多的关系，需要一个中间表。(中间表有两个外键分别参照多多的两个表的主键)</p>
+<h3 id="1-2-怎么添加外键："><a href="#1-2-怎么添加外键：" class="headerlink" title="1.2 怎么添加外键："></a>1.2 怎么添加外键：</h3><h4 id="a-添加外键对应的字段"><a href="#a-添加外键对应的字段" class="headerlink" title="a.添加外键对应的字段"></a>a.添加外键对应的字段</h4><pre><code>alter TABLE tb_student add COLUMN collid int;
+</code></pre><h4 id="b-给设计好的外键对应的字段添加外键约束"><a href="#b-给设计好的外键对应的字段添加外键约束" class="headerlink" title="b.给设计好的外键对应的字段添加外键约束"></a>b.给设计好的外键对应的字段添加外键约束</h4><p><strong> alter table 表1 add constraint 索引名 foreign key (字段1) references 表2 (字段2); </strong></p>
+<pre><code>--   - 将表1中的字段1设置为外键，并且让这个外键的值参照表2中的字段2
+ALTER TABLE tb_student ADD CONSTRAINT fk_collid_stu 
+FOREIGN KEY (collid) 
+REFERENCES  tb_college (collid);
+</code></pre><h4 id="c-删除外键约束"><a href="#c-删除外键约束" class="headerlink" title="c. 删除外键约束"></a>c. 删除外键约束</h4><p>– alter table 表名 drop foreign key 外键索引名;    - 可以删除外键约束，但是外键索引还存在；需要额外的把索引删掉<br><strong>注意: 删除外键约束的时候直接删除约束的索引无效，必须先将约束删掉，然后再删除索引.</strong></p>
+<pre><code>ALTER TABLE tb_student DROP FOREIGN KEY fk_collid_stu;
+ALTER TABLE tb_student DROP INDEX fk_collid_stu; 
+</code></pre><h4 id="d-多对多的外键约束"><a href="#d-多对多的外键约束" class="headerlink" title="d. 多对多的外键约束"></a>d. 多对多的外键约束</h4><pre><code>-- 添加学生的外键约束 
+ALTER TABLE tb_score ADD CONSTRAINT fk_stuid_score 
+FOREIGN KEY (stuid) 
+REFERENCES tb_student (stuid);
+
+-- 添加课程的外键约束
+ALTER TABLE tb_score ADD CONSTRAINT fk_couid_score 
+FOREIGN KEY (couid) 
+REFERENCES tb_course (couid);
+</code></pre><h1 id="3-查询的高级操作"><a href="#3-查询的高级操作" class="headerlink" title="3 查询的高级操作"></a>3 查询的高级操作</h1><h2 id="1-聚合：max-min-sum-avg-count"><a href="#1-聚合：max-min-sum-avg-count" class="headerlink" title="1.聚合：max()/min()/sum()/avg()/count()"></a>1.聚合：max()/min()/sum()/avg()/count()</h2><p>– SELECT 聚合函数(字段) FROM 表名 WHERE 条件;   – 按条件多表查询指定字段数据，然后将查询结果做相应的聚合运算。聚合运算的结果是最后结果</p>
+<pre><code>SELECT mark FROM tb_score;    -- 获取tb_score表中的所有分数值
+SELECT max(mark) as maxmark FROM tb_score;   -- 获取tb_score表中所有分数的最大值
+SELECT min(mark) FROM tb_score; 
+SELECT sum(mark) FROM tb_score; 
+SELECT avg(mark) FROM tb_score WHERE scoreid&gt;=123;   
+-- 计算平均值的时候如果参与运算的对象的值为NULL,那么这个数据不会参与计算
+SELECT count(mark) FROM tb_score WHERE mark&gt;=90;
+</code></pre><h2 id="2-分组"><a href="#2-分组" class="headerlink" title="2.分组"></a>2.分组</h2><p>– SELECT 字段操作  FROM 表名 WHERE 条件 GROUP BY(字段2);<br>– 将指定表中满足条件的记录按照字段2的进行分组(值是一样的在一个组里面), 然后再讲每个分组作为整体按照指定字段进行指定聚合操作</p>
+<pre><code>-- 求每个学生的平均成绩
+SELECT stuid,avg(mark) FROM tb_score WHERE scoreid &lt;= 115 GROUP BY(stuid) ;
+</code></pre><p><strong>注意:a.字段操作的位置除了分组字段不用聚合，其他字段都必须聚合   b.分组的时候where要放到分组前对需要分组的数据进行筛选</strong></p>
+<p>– having: 分组的时候，在分组后用having代替where来对分组后的数据进行筛选</p>
+<pre><code>-- 获取平均分数大于60分的学生的id
+SELECT stuid,avg(mark) FROM tb_score GROUP BY(stuid) HAVING avg(mark)&gt;60;
+</code></pre><h2 id="3-子查询-将一个查询操作的结果作为另外一个查询的数据源"><a href="#3-子查询-将一个查询操作的结果作为另外一个查询的数据源" class="headerlink" title="3.子查询: 将一个查询操作的结果作为另外一个查询的数据源"></a>3.子查询: 将一个查询操作的结果作为另外一个查询的数据源</h2><pre><code>-- 在tb_score表中获取成绩是大于90分的学生的id
+SELECT stuid FROM tb_score WHERE mark&gt;90 and stuid is not NULL;   
+
+-- 获取成绩大于90分的学生的名字
+SELECT stuname FROM tb_student WHERE stuid in 
+(SELECT stuid FROM tb_score WHERE mark&gt;90 and stuid is not NULL);  
+
+
+SELECT stuid,mark FROM tb_score WHERE mark &gt; 90 and stuid is  not NULL;
+
+-- 将一个查询的结果作为查询对象提供给另外一个查询。但是第一个查询结果需要重命名
+SELECT mark FROM (SELECT stuid,mark FROM tb_score WHERE mark &gt; 90 
+and stuid is  not NULL) as t2;
+</code></pre><h2 id="4-接连查询-同时查询多个表中的数据"><a href="#4-接连查询-同时查询多个表中的数据" class="headerlink" title="4.接连查询: 同时查询多个表中的数据"></a>4.接连查询: 同时查询多个表中的数据</h2><p><strong>SELECT * FROM 表名1,表名2… WHERE 连接条件;</strong><br>– 连接查询如果不加连接条件，结果是一个笛卡尔积：（a,b,c）(1,2,3) –&gt; (a1,a2,a3,b1,b2,b3,c1,c2,c3)<br>– (余婷, 骆昊, 王海飞) (设计学院，信通学院) –&gt; 笛卡尔积</p>
+<pre><code>-- 查询每个老师对应的学院
+SELECT teaname, collname FROM tb_college, tb_teacher WHERE tb_teacher.collid=tb_college.collid;
+-- 查询学生姓名对应的学科名的分数  
+SELECT stuname, couname, mark FROM tb_student, tb_course, tb_score 
+WHERE tb_score.stuid=tb_student.stuid and tb_score.couid=tb_course.couid;
+
+-- 查询学生名对应的学生的平均成绩
+-- SELECT stuid, AVG(mark) as avg_mark FROM tb_score GROUP BY(stuid);
+SELECT stuname, avg_mark FROM 
+tb_student, 
+(SELECT stuid, AVG(mark) as avg_mark FROM tb_score GROUP BY(stuid)) as temp_t 
+WHERE tb_student.stuid = temp_t.stuid;  
+
+-- 查询平均分高于80分的学生名字和对应的平均分分数
+SELECT stuname, avg_mark FROM 
+tb_student, 
+(SELECT stuid, AVG(mark) as avg_mark FROM tb_score GROUP BY(stuid) HAVING AVG(mark)&gt;80) as temp_t 
+WHERE tb_student.stuid = temp_t.stuid; 
+
+-- 查询平均分高于80分的学生名字和对应的平均分分数
+-- 注意:如果连接查询的时候既有连接条件又有筛选条件，我们要把筛选条件写在连接条件后边
+SELECT stuname, avg_mark FROM 
+tb_student, 
+(SELECT stuid, AVG(mark) as avg_mark FROM tb_score GROUP BY(stuid)) as temp_t 
+WHERE tb_student.stuid = temp_t.stuid and avg_mark&gt;80;   
+</code></pre><h2 id="5-内连接"><a href="#5-内连接" class="headerlink" title="5.内连接"></a>5.内连接</h2><pre><code>-- SELECT * FROM 表1 inner join 表2 on 表2的连接条件 inner join 表3 on 表3的连接条件 ...;
+-- 注意: 中间表写在最前面(存在关联其他表外键的表)
+-- 查询学生姓名对应的学科名的分数   
+SELECT stuname, couname, mark FROM tb_score  
+INNER JOIN tb_student ON tb_student.stuid=tb_score.stuid  
+INNER JOIN tb_course ON tb_course.couid=tb_score.couid 
+WHERE mark &lt; 60;  
+</code></pre><h2 id="6-外连接"><a href="#6-外连接" class="headerlink" title="6.外连接"></a>6.外连接</h2><p>外连接分为左外连接、右外连接和全连接， 但是在MySQL中支持左外连接和右外连接</p>
+<pre><code>表1(左表) left/right/inner join 表2(右表) 
+</code></pre><p>左外连接：将左表中对应字段的所有数据取出，然后再对应的右表中字段的值，如果右表对应的值不存在结果就为null<br><br>右外连接：将右表中对应字段的所有数据取出，然后再对应的左表中字段的值，如果左表对应的值不存在结果就为null </p>
+<pre><code>-- 查所有学生名对应的成绩 
+-- SELECT stuname, mark FROM tb_score INNER JOIN tb_student ON tb_student.stuid=tb_score.stuid;
+SELECT stuname, mark FROM tb_score  RIGHT JOIN tb_student ON tb_student.stuid=tb_score.stuid;   
+</code></pre><h2 id="7-字段索引"><a href="#7-字段索引" class="headerlink" title="7 字段索引"></a>7 字段索引</h2><p>– 字段的索引就相当于于目录，作用是为了能够快速的对这个字段进行查找<br>– 添加索引的好处是可以大大的提高查询效率； 缺点是：1.会消耗额外的存储空间， 2.会让添加和删除的效率降低<br>– 建议: 1.索引不能滥用  2.如果项目中针对某个字段的查询很频繁，建议加个对应的索引<br>– EXPLAIN： 获取执行计划</p>
+<pre><code>EXPLAIN SELECT * FROM tb_student WHERE stuid=110;
+EXPLAIN SELECT * FROM tb_student WHERE stuname=&#39;张三&#39;;
+
+-- 添加索引: create index 索引名称 on 表名 (字段名);  - 给指定表中的指定字段添加索引
+CREATE INDEX index_stuname on tb_student (stuname);   -- 给名字加索引
+CREATE INDEX index_stuname1 on tb_student (stuname(1));    -- 按姓加索引
+</code></pre><p>– 删除索引</p>
+<pre><code>ALTER TABLE tb_student DROP INDEX index_stuname;   
+</code></pre><h1 id="4-DCL操作"><a href="#4-DCL操作" class="headerlink" title="4 DCL操作"></a>4 DCL操作</h1><h2 id="1-创建用户"><a href="#1-创建用户" class="headerlink" title="1.创建用户"></a>1.创建用户</h2><pre><code>-- create user 用户名@登录地址
+-- 登录地址: （限制用户能够登录MySQL的主机地址）， ip地址(指定地址), localhost(数据库本机), %(任何位置)
+CREATE USER &#39;zhangshan&#39;@&#39;%&#39; IDENTIFIED BY &#39;yuting123456&#39;;  
+
+-- 删除用户:  drop user 用户名;    
+DROP USER &#39;zhangshan&#39;;
+</code></pre><h2 id="2-授权"><a href="#2-授权" class="headerlink" title="2.授权"></a>2.授权</h2><pre><code>-- grant 权限类型 on 数据库.对象 to 用户名; 
+GRANT SELECT on school.tb_student TO &#39;zhangshan&#39;;
+GRANT UPDATE on school.tb_student TO &#39;zhangshan&#39;;  
+GRANT all PRIVILEGES ON school.* TO &#39;zhangshan&#39;;   -- 添加所有权限  
+GRANT all PRIVILEGES ON school.* TO &#39;zhangshan&#39; WITH GRANT OPTION;   -- 添加所有权限，并且能够将自己的权限再授权给其他用户     
+</code></pre><h2 id="3-召回授权"><a href="#3-召回授权" class="headerlink" title="3.召回授权"></a>3.召回授权</h2><pre><code>-- REVOKE 权限类型 on 数据库.对象 from 用户名;
+REVOKE DELETE on school.* FROM &#39;zhangshan&#39;;
+REVOKE all PRIVILEGES on school.* FROM &#39;zhangshan&#39;;
+REVOKE all PRIVILEGES on school.* FROM &#39;zhangshan&#39;;
+REVOKE SELECT on school.tb_student FROM &#39;zhangshan&#39;;
+REVOKE UPDATE on school.tb_student FROM &#39;zhangshan&#39;;
+</code></pre><h2 id="4-事务"><a href="#4-事务" class="headerlink" title="4.事务"></a>4.事务</h2><p>完成一个任务需要执行多条sql，但是要求这多个操作中只要有一个操作失败，这个任务就失败，数据全部还原；所有的操作都成功，整个任务才成功的时候就使用事务  </p>
+<pre><code>-- 开启事务环境
+BEGIN;
+UPDATE tb_student set stuname=&#39;444&#39; WHERE stuname=&#39;222&#39;;
+UPDATE tb_student set birth2=&#39;1990-1-1&#39; WHERE stuname=&#39;222&#39;;
+-- 提交事务(只有begin到commit之间的所有的sql都执行成功，才会执行commit; 否则执行rollback)
+COMMIT;
+-- 事务回滚(放弃beigin到commit之间执行成功的所有sql语句的结果)
+ROLLBACK;
 </code></pre>
             </div>
             <hr>
@@ -649,7 +712,7 @@ print(5 &gt;&gt; 2)
                     </span>
                     <a href="https://github.com/LeeJune1992" class="b-link-green">leejune</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/23/wei-yun-suan/" class="b-link-green">进制与位运算</a>
+                    <a href="/2019/02/28/mysql-gao-ji-cha-xun/" class="b-link-green">mysql高级查询知识整理</a>
                 </p>
             </div>
         </div>
@@ -933,41 +996,28 @@ print(5 &gt;&gt; 2)
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/02/23/gao-ji-bian-liang-lei-xing/">
+                <a href="/2019/02/28/redis/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="python3中的高级变量">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="redis数据库科普">
                         
-                        <span class="card-title">python3中的高级变量</span>
+                        <span class="card-title">redis数据库科普</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">高级变量类型目标
-列表
-元组
-字典
-字符串
-公共方法
-变量高级
-
-知识点回顾
-Python 中数据类型可以分为 数字型 和 非数字型
-数字型
-整型 (int)
-浮点型（float）
-布尔型（bool） 
-真 True 非 0 数 —— 非零</div>
+                    <div class="summary">1.安装redis [root@iZwz97tbgo9lkabnat2lo8Z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz
+[root@iZwz97tbgo9</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-23
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-28
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/变量/" class="post-category" target="_blank">
-                                    变量
+                            <a href="/categories/数据库，redis/" class="post-category" target="_blank">
+                                    数据库，redis
                                 </a>
                             
                             
@@ -977,8 +1027,8 @@ Python 中数据类型可以分为 数字型 和 非数字型
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python3中的高级变量/" target="_blank">
-                        <span class="chip bg-color">python3中的高级变量</span>
+                    <a href="/tags/redis/" target="_blank">
+                        <span class="chip bg-color">redis</span>
                     </a>
                     
                 </div>
@@ -992,27 +1042,28 @@ Python 中数据类型可以分为 数字型 和 非数字型
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/22/vim-bian-ji-qi-zhi-shen/">
+                <a href="/2019/02/25/mysql-ji-ben-yu-fa-zheng-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="vim编辑器之神">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="mysql基本语法整理">
                         
-                        <span class="card-title">vim编辑器之神</span>
+                        <span class="card-title">mysql基本语法整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">vim编辑器之神配置vimrc配置在shell中可以通过 vim ~/.vimrc 或者 vim /etc/vimrc 打开vimrc文件对vim进行配置。在这个文件中可以进行很多和vim相关的配置，常用的如下（如果对其他配置感兴趣的可以自</div>
+                    <div class="summary">SQL语法DDL(数据定义语言)DML(数据操作语言）DCL(数据控制语言)注意: SQL中大小写不敏感（大写和小写是一样的）; 每条SQL语句必须以分号结束
+一.DDL - 主要提供数据库和表的创建、删除和修改0. 删除数据库: drop</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/vim/" class="post-category" target="_blank">
-                                    vim
+                            <a href="/categories/mysql/" class="post-category" target="_blank">
+                                    mysql
                                 </a>
                             
                             
@@ -1022,8 +1073,8 @@ Python 中数据类型可以分为 数字型 和 非数字型
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vim/" target="_blank">
-                        <span class="chip bg-color">vim</span>
+                    <a href="/tags/mysql/" target="_blank">
+                        <span class="chip bg-color">mysql</span>
                     </a>
                     
                 </div>

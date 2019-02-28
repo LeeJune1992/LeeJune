@@ -413,14 +413,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.1k
+                        2.4k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        8 分
+                        10 分
                     </div>
                     
                 
@@ -546,6 +546,24 @@ SELECT * FROM t_student LIMIT 3;   -- 获取查询结果的前3条记录
 -- select * from 表名 limit M offset N;   
 -- 对查询结果跳过前N条数据，取M条数据出来  
 SELECT * FROM t_student LIMIT 3 offset 4;  -- 跳过前4数据，然后取3条数据
+</code></pre><h2 id="5-sql基础补充"><a href="#5-sql基础补充" class="headerlink" title="5 sql基础补充==========================="></a>5 sql基础补充===========================</h2><h2 id="1-条件语句的写法"><a href="#1-条件语句的写法" class="headerlink" title="1.条件语句的写法"></a>1.条件语句的写法</h2><p>– 在SQL中可以通过 <code>where 条件语句</code>来对操作对象进行筛选 - 筛选  </p>
+<h3 id="a-比较运算符：-lt-gt-gt-lt-gt-lt"><a href="#a-比较运算符：-lt-gt-gt-lt-gt-lt" class="headerlink" title="a. 比较运算符： =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;="></a>a. 比较运算符： =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=</h3><p><strong>注意: 判断一个字段的值是否为空不用使用=和&lt;&gt;, 而是使用<code>is null</code> 和 <code>is not null</code></strong></p>
+<pre><code>SELECT addr FROM t_student;
+SELECT stuname FROM t_student WHERE addr is NULL;     -- 判断是否为NULL（空）
+SELECT stuname FROM t_student WHERE addr=&#39;&#39;;     -- 判断是否是空串
+</code></pre><h3 id="b-逻辑运算符-and-or-not"><a href="#b-逻辑运算符-and-or-not" class="headerlink" title="b. 逻辑运算符: and, or, not"></a>b. 逻辑运算符: and, or, not</h3><h3 id="c-where-字段名-between-值1-and-值2-–-筛选指定的字段的值在值1和值2之间"><a href="#c-where-字段名-between-值1-and-值2-–-筛选指定的字段的值在值1和值2之间" class="headerlink" title="c. where 字段名  between 值1 and 值2   –  筛选指定的字段的值在值1和值2之间"></a>c. where 字段名  between 值1 and 值2   –  筛选指定的字段的值在值1和值2之间</h3><pre><code>SELECT stuname,birth FROM t_student WHERE birth BETWEEN &#39;1990-1-1&#39; AND &#39;1999-12-31&#39;;  
+</code></pre><h3 id="d-where-字段名-in-集合-–-筛选出字段值是集合中的元素-集合是使用括号括起来里面多个值"><a href="#d-where-字段名-in-集合-–-筛选出字段值是集合中的元素-集合是使用括号括起来里面多个值" class="headerlink" title="d. where 字段名 in 集合   – 筛选出字段值是集合中的元素;(集合是使用括号括起来里面多个值)"></a>d. where 字段名 in 集合   – 筛选出字段值是集合中的元素;(集合是使用括号括起来里面多个值)</h3><pre><code>SELECT * FROM t_student WHERE stuname in (&#39;小花&#39;, &#39;小明&#39;, &#39;路飞&#39;);  
+</code></pre><h3 id="e-like操作"><a href="#e-like操作" class="headerlink" title="e. like操作"></a>e. like操作</h3><h2 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2.数据类型"></a>2.数据类型</h2><pre><code>-- varchar(size): 不定长字符串，size决定的是最大长度
+-- char(size): 定长字符 
+-- text: 不限长度(最大是255个字符)
+-- int/tinyint(-128~127)
+-- FLOAT(size,d)/DOUBLE(size,d)  - 这儿的size和d的值都有约束效果
+-- bit: 只有0和1两个值
+-- date/datetime/time: 值可以是时间函数的结果，也可以时间字符串；计算或者是比较的时候内部是按时间处理的
+    UPDATE t_student SET tel=&#39;1367819230&#39;;
+    ALTER TABLE t_student ADD COLUMN intro VARCHAR(10);
+    SELECT * FROM t_student;  
+</code></pre><h2 id="3-去重"><a href="#3-去重" class="headerlink" title="3.去重"></a>3.去重</h2><pre><code>SELECT DISTINCT addr FROM t_student;  
 </code></pre>
             </div>
             <hr>
@@ -968,25 +986,26 @@ SELECT * FROM t_student LIMIT 3 offset 4;  -- 跳过前4数据，然后取3条�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/02/25/mysql-ji-ben-yu-fa-zheng-li/">
+                <a href="/2019/02/28/mysql-gao-ji-cha-xun/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="mysql基本语法整理">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="mysql高级查询知识整理">
                         
-                        <span class="card-title">mysql基本语法整理</span>
+                        <span class="card-title">mysql高级查询知识整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">SQL语法DDL(数据定义语言)DML(数据操作语言）DCL(数据控制语言)注意: SQL中大小写不敏感（大写和小写是一样的）; 每条SQL语句必须以分号结束
-一.DDL - 主要提供数据库和表的创建、删除和修改0. 删除数据库: drop</div>
+                    <div class="summary">1 添加约束==============================1.创建表的时候添加约束CREATE TABLE if not EXISTS t_college
+(
+collid int, 
+collname VARCHAR(20)</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-28
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -999,7 +1018,6 @@ SELECT * FROM t_student LIMIT 3 offset 4;  -- 跳过前4数据，然后取3条�
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1160,7 +1178,7 @@ SELECT * FROM t_student LIMIT 3 offset 4;  -- 跳过前4数据，然后取3条�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">15.9k</span>
+                <span class="white-color">19k</span>
             
 
             
